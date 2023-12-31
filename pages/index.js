@@ -5,7 +5,7 @@ import Footer from '../components/footer';
 import Carousel from '../components/carousel'
 import {Imagecard_l, Imagecard_r} from '../components/imagecard';
 import homestyle from '../styles/home.module.css';
-import CFP_and_PCG from '../public/static/images/oral_history/CFP_and_PCG_interview.jpg';
+import CFP_and_PCG from '../public/static/images/oral_history/CFP_and_PCG_interview.png';
 
 
 //d prefix convention used for div
