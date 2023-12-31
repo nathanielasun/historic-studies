@@ -1,0 +1,105 @@
+.full_env {
+    background: #ffffff;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 770px) {
+.d_encompass {
+    margin: 0 auto;
+    padding: 4px 0px;
+    width: 98vw;
+    min-height: 800px;
+    min-width: 500px;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+}
+    
+.d_header {
+    height: 275px;
+    width: 100%;
+    z-index: 1;
+}
+
+.d_bodycards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    border-top: 2px solid black;
+}
+
+.card {
+    margin: auto;
+    width: 100%;
+}
+
+.d_connect {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.connect {
+    margin: auto;
+    font-size: 48px;
+}
+
+}
+
+@media screen and (max-width: 769px) {
+    .d_encompass {
+        margin: 0 auto;
+        padding: 4px 0px;
+        width: 96vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+        
+    .d_header {
+        height: 80px;
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .d_bodycards {
+        margin: auto;
+        width: 98%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .d_connect {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .card {
+        margin: 5px auto;
+        width: 100%;
+    }
+
+    .connect {
+        margin: auto;
+        text-align: center;
+        font-size: 48px;
+    }
+
+    .d_footer {
+        position: relative;
+        top: -2px;
+        margin: auto;
+        height: 90px;
+        width: 98%;
+    }
+}

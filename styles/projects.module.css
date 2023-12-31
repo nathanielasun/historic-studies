@@ -1,0 +1,136 @@
+.full_env {
+    background: #ffffff;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 770px) {
+.d_encompass {
+    margin: 0 auto;
+    padding: 4px 0px;
+    width: 98vw;
+    min-height: 800px;
+    min-width: 500px;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.d_project_images {
+    display: "flex";
+    flex-direction: "row";
+    justify-content:"center";
+}
+.project_image {
+    margin: auto;
+}
+.d_title {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projects {
+    font-size: 36px;
+    text-align: center;
+}
+.d_header {
+    height: 275px;
+    width: 100%;
+    z-index: 1;
+}
+
+.d_cards {
+    margin: 0px;
+    position: relative;
+    top: 2px;
+}
+
+.d_project_images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.projcet_image {
+    max-width: 100%;
+    height: auto;
+}
+
+.d_imagecard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-top: 2px solid black;
+}
+.d_imagecard:last-child {
+    margin: 0px 0px 2px 0px;
+}
+}
+
+@media screen and (max-width: 769px) {
+    .d_encompass {
+        margin: 0px auto;
+        padding: 4px 0px;
+        width: 96vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .d_header {
+        height: 80px;
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        z-index: 999;
+    }
+    .d_title {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .projects {
+        text-align: center;
+    }
+    .d_cards {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .d_imagecard {
+        margin: 0px auto 5px auto;
+        width: 98%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .d_project_images {
+        display: flex;
+        flex-direction:  column;
+        justify-content: center;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+    }
+    .project_image {
+        margin: auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .d_dropcard {
+        margin: 5px auto;
+    };
+    .d_footer {
+        margin: auto;
+        height: 90px;
+        width: 98%;
+    }
+}
