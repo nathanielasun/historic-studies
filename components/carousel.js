@@ -1,11 +1,14 @@
 //carousel image component
-
 import React from 'react';
 import Slider from 'react-slick';
 import Image from 'next/image';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import styles from '../components/component_styles.module.css'
+import styles from '../components/component_styles.module.css';
+import crypt from '/public/static/images/specialty_research/crypt.jpg';
+import specialty_research_slide from '/public/static/images/specialty_research/specialty_research_slide.jpeg'
+import goss_reunion from '/public/static/images/specialty_research/goss_reunion.jpg';
+
 
 const Carousel = () => {
     const settings = {
@@ -24,9 +27,9 @@ const Carousel = () => {
         <Slider {...settings}>
             <div className={styles.d_slide}>
                 <div className={styles.d_images}>
-                    <Image className={styles.slide} style={{margin: '0px', border: 'none'}} src="/static/images/specialty_research/crypt.png" width={450} height={320} loading="eager" />
-                    <Image className={styles.slide} style={{margin: '0px'}} src="/static/images/specialty_research/specialty_research_slide.png" alt="image" width={677} height={320} loading="eager"/>
-                    <Image className={styles.slide} style={{margin: '0px', border: 'none'}} src="/static/images/specialty_research/goss_reunion.png" width={280} height={320} loading="eager"/>
+                    <Image className={styles.slide} style={{margin: '0px', border: 'none'}} src={crypt} width={450} height={320} loading="eager" />
+                    <Image className={styles.slide} style={{margin: '0px'}} src={specialty_research_slide} alt="image" width={677} height={320} loading="eager"/>
+                    <Image className={styles.slide} style={{margin: '0px', border: 'none'}} src={goss_reunion} width={280} height={320} loading="eager"/>
                 </div>
                 <div className={styles.d_slide_text}>
                     <p className={styles.slide_text}>Specialty Research</p>
