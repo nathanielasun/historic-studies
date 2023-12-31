@@ -3,7 +3,7 @@ import Image from 'next/image';
 import styles from './component_styles.module.css';
 import { useState } from 'react';
 import { Analytics } from '@vercel/analytics/react';
-
+import { SpeedInsights } from '@vercel/speed-insights/next';
 //d prefix convention used for div
 //m suffix convention used for mobile
 
@@ -105,6 +105,7 @@ const Header = () => {
                 </ul>
             </div>
             <Analytics />
+            <SpeedInsights />
         </div>
         </>
     )

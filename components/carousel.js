@@ -25,7 +25,7 @@ const Carousel = () => {
             <div className={styles.d_slide}>
                 <div className={styles.d_images}>
                     <Image className={styles.slide} style={{margin: '0px', border: 'none'}} src="/images/specialty_research/crypt.jpg" width={450} height={320} loading="eager" />
-                    <Image className={styles.slide} style={{margin: '0px'}} src="/images/specialty_research/specialty_research_slide.png" alt="image" width={677} height={320} loading="eager"/>
+                    <Image className={styles.slide} style={{margin: '0px'}} src="/images/specialty_research/specialty_research_slide.jpeg" alt="image" width={677} height={320} loading="eager"/>
                     <Image className={styles.slide} style={{margin: '0px', border: 'none'}} src="/images/specialty_research/goss_reunion.jpg" width={280} height={320} loading="eager"/>
                 </div>
                 <div className={styles.d_slide_text}>
