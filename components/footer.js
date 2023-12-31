@@ -6,7 +6,7 @@ const Footer = () => {
         <>
         <div className={styles.d_footer}>
             <div className={styles.d_footer_contact}>
-                <p className={styles.footer_contact}>Contact Charles at <Link href="mailto:cphilips@gmail.com" className={styles.footer_link}>cphilips5509@gmail.com</Link> or 843-881-3128</p>
+                <p className={styles.footer_contact}>Contact Charles at <Link href="mailto:cphilips@gmail.com" className={styles.footer_link}>cphilips5509@gmail.com</Link> or 843-532-6327</p>
             </div>
             <div className={styles.d_footer_links}>
                 <p className={styles.footer_links}>

@@ -7,7 +7,7 @@ import {Imagecard_l, Imagecard_r} from '../components/imagecard';
 
 const Contact = () => {
 
-    const contactInfo = `\n<b>Email:</b> <a href="mailto:cphilips5509@gmail.com">cphilips5509@gmail.com</a>\n\n<b>Telephone:</b> +1 (843)-881-3128\n\n<b>Address:</b> \n2309 Pristine View Rd\nCharleston, South Carolina 29414`;
+    const contactInfo = `\n\n\n<b>Email:</b> <a href="mailto:cphilips5509@gmail.com">cphilips5509@gmail.com</a>\n\n<b>Telephone:</b> +1 (843)-532-6327\n\n\n\n`;
 
     return (
         <>
