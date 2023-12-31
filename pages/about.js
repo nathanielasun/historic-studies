@@ -28,7 +28,7 @@ const About = () => {
                         <Imagecard_l imageurl={"/static/images/people/CFP_library_ded.png"} imagealt={"A photo of Charles Philips"} height={405} width={335} title={"Charles F. Philips, Jr."} text={aboutCharlesPhilips}/>
                     </div>
                     <div className={`${styles.d_card}`}>
-                        <Imagecard_r imageurl={"/static/images/about/CFP_presentation.png"} imagealt={"Charles Philips Vitae"} height={420} width={454} title={"HSL's Work"} text={charlesPhilipsWork}/>
+                        <Imagecard_r imageurl={"/static/images/about/CFP_presentation.JPG"} imagealt={"Charles Philips Vitae"} height={420} width={454} title={"HSL's Work"} text={charlesPhilipsWork}/>
                     </div>
                 </div>
                 <div className={`${styles.d_footer}`}>

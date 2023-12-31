@@ -34,7 +34,7 @@ const Home = () => {
                 <Imagecard_l className={`${homestyle.card}`} imagealt={"Photo of HSL team working"} width="400" height="300" imageurl={"/static/images/oral_history/CFP_and_PCG_interview.jpg"} title={"Work with HSL"} text={companyAbout} />
             </div>
             <div className={`${homestyle.d_card}`}>
-                <Imagecard_r className={homestyle.card} imagealt={"Photo of Charles F. Philips, Jr."} width="357" height="460" imageurl={"/static/images/people/dam_photo_cfp.jpg"} title={"Charles F. Philips, Jr."} text={charlesAbout}/>
+                <Imagecard_r className={homestyle.card} imagealt={"Photo of Charles F. Philips, Jr."} width="357" height="460" imageurl={"/static/images/people/dam_photo_cfp.JPG"} title={"Charles F. Philips, Jr."} text={charlesAbout}/>
             </div>
         </div>
         <div className={`${homestyle.d_footer}`}>
