@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './component_styles.module.css';
 import { useState } from 'react';
-
+import { Analytics } from '@vercel/analytics/react';
 
 //d prefix convention used for div
 //m suffix convention used for mobile
@@ -104,6 +104,7 @@ const Header = () => {
                     <li className={styles.pagelist_item_m}><Link className={styles.pagelist_link_m} href="../contact">CONTACT</Link></li>
                 </ul>
             </div>
+            <Analytics />
         </div>
         </>
     )
