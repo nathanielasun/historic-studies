@@ -5,6 +5,8 @@ import Footer from '../components/footer';
 import Carousel from '../components/carousel'
 import {Imagecard_l, Imagecard_r} from '../components/imagecard';
 import homestyle from '../styles/home.module.css';
+import CFP_and_PCG from '../public/static/images/oral_history/CFP_and_PCG_interview.jpg';
+
 
 //d prefix convention used for div
 //m suffix convention used for mobile
@@ -31,7 +33,7 @@ const Home = () => {
         </div>
         <div className={`${homestyle.d_cards}`}>
             <div className={`${homestyle.d_card}`}>
-                <Imagecard_l className={`${homestyle.card}`} imagealt={"Photo of HSL team working"} width="400" height="300" imageurl={"/static/images/oral_history/CFP_and_PCG_interview.jpg"} title={"Work with HSL"} text={companyAbout} />
+                <Imagecard_l className={`${homestyle.card}`} imagealt={"Photo of HSL team working"} width="400" height="300" imageurl={CFP_and_PCG} title={"Work with HSL"} text={companyAbout} />
             </div>
             <div className={`${homestyle.d_card}`}>
                 <Imagecard_r className={homestyle.card} imagealt={"Photo of Charles F. Philips, Jr."} width="357" height="460" imageurl={"/static/images/people/dam_photo_cfp.JPG"} title={"Charles F. Philips, Jr."} text={charlesAbout}/>
