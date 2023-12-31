@@ -35,7 +35,7 @@ const Projects = () => {
                         <Imagecard_l className={`${styles.card}`} imagealt={"Dean Hall Work"} width="426" height="320" imageurl={"/static/images/cultural_resources/Colonaware_at Dean_Hall.jpg"} title={"Dean Hall Plantation Slave Row (38BK2132)"} text={deanHall} />
                     </div>
                     <div className={styles.d_project_images}>
-                        <Image className={styles.project_image} width={800} height={627} src="/static/images/cultural_resources/dean_hall_plantation.jpg"/>
+                        <Image className={styles.project_image} width={800} height={627} src="/static/images/cultural_resources/dean_hall_plantation.png"/>
                         <Image className={styles.project_image} width={496} height={640} src="/static/images/cultural_resources/dean_hall_vol_1.png" />
                     </div>
                     <div className={`${styles.d_imagecard}`}>
