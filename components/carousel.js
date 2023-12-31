@@ -44,10 +44,10 @@ const Carousel = () => {
             </div>
             <div className={styles.d_slide}>
                 <div className={styles.d_images}>
-                <Image className={styles.slide} src="/static/images/published_works/bor_water_control_structure.png" width={248} height={320} loading="eager" />
-                <Image className={styles.slide} src="/static/images/published_works/as_mobile_goes.png" width={248} height={320} loading="eager" />
-                <Image className={styles.slide} src="/static/images/published_works/william_bartrams_travels.png" width={248} height={320} loading="eager" />
-                <Image className={styles.slide} src="/static/images/published_works/red_book_cover.png" width={248} height={320} loading="eager"/>
+                <Image className={styles.slide} src="/static/images/published_works/bor_water_control_structure.png" width={248} height={320} loading="lazy" />
+                <Image className={styles.slide} src="/static/images/published_works/as_mobile_goes.png" width={248} height={320} loading="lazy" />
+                <Image className={styles.slide} src="/static/images/published_works/william_bartrams_travels.png" width={248} height={320} loading="lazy" />
+                <Image className={styles.slide} src="/static/images/published_works/red_book_cover.png" width={248} height={320} loading="lazy"/>
                 </div>
                 <div className={styles.d_slide_text}>
                     <p className={styles.slide_text}>Published Works</p>
@@ -55,9 +55,9 @@ const Carousel = () => {
             </div>
             <div className={styles.d_slide}>
                 <div className={styles.d_images}>
-                    <Image className={styles.slide} style={{margin: "0px"}} src="/static/images/cultural_resources/Colonaware_at Dean_Hall.jpg" width={426} height={320} loading="eager"/>
-                    <Image className={styles.slide} style={{margin: "0px"}} src="/static/images/cultural_resources/dean_hall_vol_1.png" width={248} height={320} loading="eager"/>
-                    <Image className={styles.slide} style={{margin: "0px"}} src="/static/images/cultural_resources/dr_site_cain_holy.jpg" width={427} height={320} loading="eager"/>
+                    <Image className={styles.slide} style={{margin: "0px"}} src="/static/images/cultural_resources/Colonaware_at Dean_Hall.jpg" width={426} height={320} loading="lazy"/>
+                    <Image className={styles.slide} style={{margin: "0px"}} src="/static/images/cultural_resources/dean_hall_vol_1.png" width={248} height={320} loading="lazy"/>
+                    <Image className={styles.slide} style={{margin: "0px"}} src="/static/images/cultural_resources/dr_site_cain_holy.jpg" width={427} height={320} loading="lazy"/>
                 </div>
                 <div className={styles.d_slide_text}>
                     <p className={styles.slide_text}>{"Cultural Resources (formal reports)"}</p>
