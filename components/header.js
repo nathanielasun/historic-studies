@@ -19,7 +19,7 @@ const Header = () => {
         <div className={`${styles.d_header}`}>
             <div className={`${styles.d_header_top}`}>
                 <div className={`${styles.d_header_logo}`}>
-                    <Link className={`${styles.logo_home_link}`} href="./"><Image width={313} height={195} src="/images/hsl_logo.jpg"/></Link>
+                    <Link className={`${styles.logo_home_link}`} href="./"><Image width={313} height={195} src="/static/images/hsl_logo.jpg"/></Link>
                 </div>
                 <div className={`${styles.d_media_handles}`}>
                     <div className={`${styles.d_insta}`}>
@@ -57,7 +57,7 @@ const Header = () => {
         </div>
         <div className={styles.d_header_m}>
             <div className={styles.d_logo_m}>
-                <Image className={styles.logo_m} src="/images/hsl_logo.jpg" width={104} height={65} />
+                <Image className={styles.logo_m} src="/static/images/hsl_logo.jpg" width={104} height={65} />
             </div>
             <div className={styles.d_menu_m} onClick={toggleMenu}>
                 <div className={styles.d_burger_m}>

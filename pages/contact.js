@@ -24,7 +24,7 @@ const Contact = () => {
                     </div>
                 <div className={styles.d_bodycards}>
                     <div className={`${styles.d_card}`}>
-                        <Imagecard_r className={`${styles.card}`} imagealt={"Charles Contact Photo"} width="300" height="195" imageurl={"/images/hsl_logo_name.jpg"} title={"Contact Charles F. Philips, Jr."} text={contactInfo} />
+                        <Imagecard_r className={`${styles.card}`} imagealt={"Charles Contact Photo"} width="300" height="195" imageurl={"/static/images/hsl_logo_name.jpg"} title={"Contact Charles F. Philips, Jr."} text={contactInfo} />
                     </div>
                 </div>
                 <div className={`${styles.d_footer}`}>
