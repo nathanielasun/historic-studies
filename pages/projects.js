@@ -39,7 +39,7 @@ const Projects = () => {
                         <Image className={styles.project_image} width={496} height={640} src="/static/images/cultural_resources/dean_hall_vol_1.png" />
                     </div>
                     <div className={`${styles.d_imagecard}`}>
-                        <Image className={styles.project_image} width={300} height={400} src="/static/images/specialty_research/goss_gravesite.jpg" />
+                        <Image className={styles.project_image} width={300} height={400} src="/static/images/specialty_research/goss_gravesite.jpeg" />
                         <Imagecard_r className={`${styles.card}`} imagealt={"Goss Family title and photos"} width="335" height="435" imageurl={"/static/images/specialty_research/goss_family_title.png"} title={"Goss Family Investigation - James Island, South Carolina"} text={gossFamily} />
                     </div>
                 </div>
