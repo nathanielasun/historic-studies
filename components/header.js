@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './component_styles.module.css';
+import Head from 'next/head';
 import { useState } from 'react';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -16,6 +17,9 @@ const Header = () => {
 
     return (
         <>
+        <Head>
+            <link rel="icon" href="./static/images/favicon.png" sizes="any" />
+        </Head>
         <div className={`${styles.d_header}`}>
             <div className={`${styles.d_header_top}`}>
                 <div className={`${styles.d_header_logo}`}>
