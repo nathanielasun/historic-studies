@@ -513,6 +513,8 @@
     }
     
     .imgcardimg {
+        max-width: 100%;
+        height: auto;
         padding: 0px;
         position: relative;
         display: block;
