@@ -49,7 +49,7 @@ const Header = () => {
                                 <li className={`${styles.service_item}`}><Link className={`${styles.service_item_link}`} href="../services/specialty-research" >Specialty Research</Link></li>
                                 <li className={`${styles.service_item}`}><Link className={`${styles.service_item_link}`} href="" >Oral History Projects</Link></li>
                                 <li className={`${styles.service_item}`}><Link className={`${styles.service_item_link}`} href="" >Published Works</Link></li>
-                                <li className={`${styles.service_item}`}><Link className={`${styles.service_item_link}`} href="" >Cultural Resources</Link></li>
+                                <li className={`${styles.service_item}`}><Link className={`${styles.service_item_link}`} href="../services/cultural-resources" >Cultural Resources</Link></li>
                             </ul>
                             </div>
                         </li>
@@ -100,7 +100,7 @@ const Header = () => {
                                 <li className={styles.service_item_m}><Link className={styles.service_item_link_m} href="../services/specialty-research">Specialty Research</Link></li>
                                 <li className={styles.service_item_m}><Link className={styles.service_item_link_m} href="../services/oral-history.js">Oral History Projects</Link></li>
                                 <li className={styles.service_item_m}><Link className={styles.service_item_link_m} href="../services/published-works.js">Published Works</Link></li>
-                                <li className={styles.service_item_m}><Link className={styles.service_item_link_m} href="../services/cultural-resources.js">Cultural Resources</Link></li>
+                                <li className={styles.service_item_m}><Link className={styles.service_item_link_m} href="../services/cultural-resources">Cultural Resources</Link></li>
                             </ul>
                         </div>
                     </li>

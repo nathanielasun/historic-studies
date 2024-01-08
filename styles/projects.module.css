@@ -53,7 +53,7 @@
     justify-content: center;
 }
 
-.projcet_image {
+.project_image {
     max-width: 100%;
     height: auto;
 }
@@ -117,8 +117,8 @@
         flex-direction:  column;
         justify-content: center;
         border-top: 2px solid black;
-        border-bottom: 2px solid black;
     }
+    
     .project_image {
         margin: auto;
         max-width: 100%;
