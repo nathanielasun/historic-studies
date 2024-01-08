@@ -29,6 +29,7 @@ export const Imagecard_l = ({imageurl, imagealt, width, height, title, text}) =>
                     alt={imagealt} 
                     width={width} 
                     height={height} 
+                    quality={50}
                     className={styles.imgcardimg}>
                 </Image>
             </div>
@@ -82,6 +83,7 @@ export const Imagecard_m = ({imageProps, title, text}) => {
                     alt={imageProps[ETimages.IMAGE1ALT]} 
                     width={imageProps[ETimages.IMAGE1WIDTH]} 
                     height={imageProps[ETimages.IMAGE1HEIGHT]} 
+                    quality={50}
                     className={styles.imgcardimg}>
                 </Image>
             </div>
@@ -115,6 +117,7 @@ export const Imagecard_m = ({imageProps, title, text}) => {
                 alt={imageProps[ETimages.IMAGE2ALT]} 
                 width={imageProps[ETimages.IMAGE2WIDTH]} 
                 height={imageProps[ETimages.IMAGE2HEIGHT]} 
+                quality={50}
                 className={styles.imgcardimg}>
             </Image>
             </div>
@@ -157,6 +160,7 @@ export const Imagecard_r = ({imageurl, imagealt, width, height, title, text}) =>
                 alt={imagealt} 
                 width={width} 
                 height={height} 
+                quality={50}
                 className={styles.imgcardimg}>
             </Image>
             </div>
@@ -212,6 +216,7 @@ export const Imagecard_db = ({imageProps, title, text}) => {
                         width={imageProps[ETimages.IMAGE1WIDTH]} 
                         height={imageProps[ETimages.IMAGE1HEIGHT]} 
                         className={styles.imgcardimg}
+                        quality={50}
                         style=
                         {{
                             maxWidth: "100%",
@@ -242,6 +247,7 @@ export const Imagecard_db = ({imageProps, title, text}) => {
                         width={imageProps[ETimages.IMAGE2WIDTH]} 
                         height={imageProps[ETimages.IMAGE2HEIGHT]} 
                         className={styles.imgcardimg}
+                        quality={50}
                         style=
                         {{
                             maxWidth: "100%",
