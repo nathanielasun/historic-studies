@@ -21,6 +21,21 @@
     z-index: 1;
 }
 
+.d_byline {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.byline {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 4px;
+}
+
 .d_carousel {
     margin: 2px 0px;
     height: 400px;
@@ -71,6 +86,21 @@
         flex-direction: row;
         justify-content: center;
     }
+
+.d_byline {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.byline {
+    max-width: 98%;
+    height: auto;
+    margin: auto;
+    padding: 0px;
+}
 
     .d_carousel {
         margin: 2px auto;

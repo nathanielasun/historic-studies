@@ -26,7 +26,7 @@ const SpecResearch = () => {
                         <Header />
                     </div>
                     <div className={styles.d_title}>
-                        <h1 className={styles.title}>Specialty Research Services</h1>
+                        <h1 className={styles.title}>Specialty Research Service Examples</h1>
                     </div>
                     <div className={styles.d_dropcard} style={{borderTop: "2px solid black"}}>
                         <Imagecard_l imageurl={"/static/images/specialty_research/new_gaillard_graves.png"} imagealt={`new gaillard gravesite`} width={586} height={440} title={`Gaillard Graves Project`} text={gaillardGraves}/>

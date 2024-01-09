@@ -48,7 +48,7 @@ const Header = () => {
                             <div className={`${styles.header_link}`}>SERVICES
                             <ul className={`${styles.services_list}`}>
                                 <li className={`${styles.service_item}`}><Link className={`${styles.service_item_link}`} href="../services/specialty-research" >Specialty Research</Link></li>
-                                <li className={`${styles.service_item}`}><Link className={`${styles.service_item_link}`} href="" >Oral History Projects</Link></li>
+                                <li className={`${styles.service_item}`}><Link className={`${styles.service_item_link}`} href="../services/oral-history" >Oral History Projects</Link></li>
                                 <li className={`${styles.service_item}`}><Link className={`${styles.service_item_link}`} href="" >Published Works</Link></li>
                                 <li className={`${styles.service_item}`}><Link className={`${styles.service_item_link}`} href="../services/cultural-resources" >Cultural Resources</Link></li>
                             </ul>
@@ -99,7 +99,7 @@ const Header = () => {
                         <div className={styles.pagelist_link_m}>SERVICES
                             <ul className={styles.services_list_m}>
                                 <li className={styles.service_item_m}><Link className={styles.service_item_link_m} href="../services/specialty-research">Specialty Research</Link></li>
-                                <li className={styles.service_item_m}><Link className={styles.service_item_link_m} href="../services/oral-history.js">Oral History Projects</Link></li>
+                                <li className={styles.service_item_m}><Link className={styles.service_item_link_m} href="../services/oral-history">Oral History Projects</Link></li>
                                 <li className={styles.service_item_m}><Link className={styles.service_item_link_m} href="../services/published-works.js">Published Works</Link></li>
                                 <li className={styles.service_item_m}><Link className={styles.service_item_link_m} href="../services/cultural-resources">Cultural Resources</Link></li>
                             </ul>

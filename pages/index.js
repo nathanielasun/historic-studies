@@ -6,7 +6,7 @@ import Carousel from '../components/carousel'
 import {Imagecard_l, Imagecard_r} from '../components/imagecard';
 import homestyle from '../styles/home.module.css';
 import CFP_and_PCG from '../public/static/images/oral_history/CFP_and_PCG_interview.png';
-
+import Image from 'next/image';
 
 //d prefix convention used for div
 //m suffix convention used for mobile
@@ -28,6 +28,14 @@ const Home = () => {
         <div className={`${homestyle.d_header}`}>
             <Header />
         </div>
+        <div className={homestyle.d_byline}>
+                <Image 
+                    className={homestyle.byline}
+                    src="/static/images/byline.png"
+                    width={1200*1.2}
+                    height={600*1.2}
+                />
+            </div>
         <div className={`${homestyle.d_carousel}`}>
             <Carousel />
         </div>
