@@ -10,11 +10,16 @@ import Image from 'next/image';
 
 //d prefix convention used for div
 //m suffix convention used for mobile
-
+/* photo of charlie philips card
+            <div className={`${homestyle.d_card}`}>
+                <Imagecard_r className={homestyle.card} imagealt={"Photo of Charles F. Philips, Jr."} width="357" height="460" imageurl={"/static/images/people/dam_photo_cfp.JPG"} title={"Charles F. Philips, Jr."} text={charlesAbout}/>
+            </div>
+*/
 const Home = () => {
 
-    const companyAbout = `\nHistoric Studies Limited is an organization dedicated to comprehensive historic research, specializing in resolving intricate cultural resource challenges. Our primary focus lies in meticulous historic deed research, with expertise in navigating 18th and 19th-century archives. Our comprehensive services encompass historic deed analysis, family genealogies, oral histories, cemetery investigations, and cultural resource reporting and support. \n\nWith a profound commitment to uncovering the rich history of both land and people, HSL is your trusted partner. Our proprietor brings decades of experience collaborating with cultural resource entities, municipalities, counties, private families, and businesses. We have successfully contributed to diverse projects, including historical land use assessments, site ruins identification, original grant linkages, cemetery location services, and conducting oral history interviews.`;
-    const charlesAbout = `\nAs founder and sole proprietor of Historic Studies Limited, Charles Philips has worked in the cultural resources field as a life-long historian. Mr. Philips was employed by Brockington and Associates, a cultural resources firm, for twenty years and has continued to work on projects with them after his retirement in 2021. He has a B.A. from Mercer University (1975) and an M.A. from the Citadel/College of Charleston (2002). He has more than fifty years experience in lower south-east history. The majority of his research and writing has been in support of cultural resource investigations, land study histories, cemetery studies, and oral histories. He has published on a variety of subjects including Colonial, Antibellum, and Twentieth-Century topics. \n\nThe photo shows Mr. Philips conducting a study of a Seventeenth-Century mill dam near Summerville, S.C., typical of the work he does. He joins archeology, anthrpology, and history together to explain the features on the landscape.`
+    const companyAbout = `\nHistoric Studies Limited is an organization dedicated to comprehensive historic research, specializing in resolving intricate cultural resource challenges. Our primary focus lies in meticulous historic deed research, with expertise in navigating 18th and 19th-century archives.\n\n Perhaps you need... \n\u009c•\u009c A cultural resource study\n\u009c•\u009c A King's Grant, boundary, or easement study\n\u009c•\u009c An oral history of a near-forgotten community\n\u009c•\u009c A documented photographic coffee table style family history\n\u009c•\u009c Information on a community/family cemetary\n
+These and many other projects require expertise in legal, archival, and family records, then interpreting those records to provide a context. Contact us. We discover the past for you today that helps prepare your future.`;
+    const charlesAbout = `\nAs founder and sole proprietor of Historic Studies Limited, Charles Philips has worked in the cultural resources field as a life-long historian. Mr. Philips was employed by Brockington and Associates, a cultural resources firm, for twenty years and has continued to work on projects with them after his retirement in 2021. He has a B.A. from Mercer University (1975) and an M.A. from the Citadel/College of Charleston (2002). He has more than fifty years experience in lower south-east history. The majority of his research and writing has been in support of cultural resource investigations, land study histories, cemetery studies, and oral histories. He has published on a variety of subjects including Colonial, Antebellum, and Twentieth-Century topics.`
     return (
         <>
 <Head>
@@ -43,9 +48,7 @@ const Home = () => {
             <div className={`${homestyle.d_card}`}>
                 <Imagecard_l className={`${homestyle.card}`} imagealt={"Photo of HSL team working"} width="400" height="300" imageurl={CFP_and_PCG} title={"Work with HSL"} text={companyAbout} />
             </div>
-            <div className={`${homestyle.d_card}`}>
-                <Imagecard_r className={homestyle.card} imagealt={"Photo of Charles F. Philips, Jr."} width="357" height="460" imageurl={"/static/images/people/dam_photo_cfp.JPG"} title={"Charles F. Philips, Jr."} text={charlesAbout}/>
-            </div>
+            
         </div>
         <div className={`${homestyle.d_footer}`}>
             <Footer />
