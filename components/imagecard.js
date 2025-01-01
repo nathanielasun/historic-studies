@@ -60,11 +60,11 @@ export const Imagecard_m = ({imageProps, title, text}) => {
     };
     return (
         <>
-        <div className={styles.d_imagecard}>
+        <div className={styles.d_imagecard} style={{borderTop:"2px solid black"}}>
             <div className={styles.d_imgcard_img}>
                 <Image 
                 src={imageProps[ETimages.IMAGE1URL]} 
-                className={styles.d_imgbackground} 
+                className={styles.d_imgbackground}
                 width={imageProps[ETimages.IMAGE1WIDTH]} 
                 height={imageProps[ETimages.IMAGE1HEIGHT]} 
                 quality={25}
