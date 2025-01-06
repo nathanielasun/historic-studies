@@ -1,5 +1,5 @@
 .full_env {
-    background: #ffffff;
+    background: #ebffff;
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -14,6 +14,7 @@
     max-width: 1400px;
     display: flex;
     flex-direction: column;
+    
 }
 
 .d_header {

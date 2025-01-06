@@ -49,7 +49,7 @@ const Header = () => {
                             <ul className={`${styles.services_list}`}>
                                 <li className={`${styles.service_item}`}><Link className={`${styles.service_item_link}`} href="../services/specialty-research" >Specialty Research</Link></li>
                                 <li className={`${styles.service_item}`}><Link className={`${styles.service_item_link}`} href="../services/oral-history" >Oral History Projects</Link></li>
-                                <li className={`${styles.service_item}`}><Link className={`${styles.service_item_link}`} href="" >Published Works</Link></li>
+                                <li className={`${styles.service_item}`}><Link className={`${styles.service_item_link}`} href="../services/published-works" >Published Works</Link></li>
                                 <li className={`${styles.service_item}`}><Link className={`${styles.service_item_link}`} href="../services/cultural-resources" >Cultural Resources</Link></li>
                             </ul>
                             </div>

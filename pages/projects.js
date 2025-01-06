@@ -34,11 +34,15 @@ const Projects = () => {
                     <div className={`${styles.d_imagecard}`}>
                         <Imagecard_l className={`${styles.card}`} imagealt={"Dean Hall Work"} width="426" height="320" imageurl={"/static/images/cultural_resources/Colonaware_at Dean_Hall.jpg"} title={"Dean Hall Plantation Slave Row (38BK2132)"} text={deanHall} />
                     </div>
-                    <div className={styles.d_project_images}>
-                        <Image className={styles.project_image} width={800} height={627} src="/static/images/cultural_resources/dean_hall_plantation.png"/>
-                        <Image className={styles.project_image} width={496} height={640} src="/static/images/cultural_resources/dean_hall_vol_1.png" />
+                    <div className={styles.d_project_images} style={{borderTop: "2px solid black"}}>
+                        <Image className={styles.project_image} width={800/2} height={627/2} src="/static/images/cultural_resources/dean_hall_plantation.png"/>
+                        <Image className={styles.project_image} width={496/2} height={640/2} src="/static/images/cultural_resources/dean_hall_vol_1.png" />
                     </div>
+<<<<<<< HEAD
+                    <div className={styles.d_dropcard} style={{borderTop: "2px solid black", borderBottom: "2px solid black"}}>
+=======
                     <div className={styles.d_dropcard} style={{borderTop: "2px solid black"}}>
+>>>>>>> c0c3464176365da6e5cc626f220721dfd1db3ad1
                         <Imagecard_l imageurl={"/static/images/specialty_research/new_gaillard_graves.png"} imagealt={`new gaillard gravesite`} width={586} height={440} title={`Gaillard Graves Project`} text={gaillardGraves}/>
                     </div>
                 </div>

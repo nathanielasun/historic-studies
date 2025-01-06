@@ -22,7 +22,7 @@ These and many other projects require expertise in legal, archival, and family r
     const charlesAbout = `\nAs founder and sole proprietor of Historic Studies Limited, Charles Philips has worked in the cultural resources field as a life-long historian. Mr. Philips was employed by Brockington and Associates, a cultural resources firm, for twenty years and has continued to work on projects with them after his retirement in 2021. He has a B.A. from Mercer University (1975) and an M.A. from the Citadel/College of Charleston (2002). He has more than fifty years experience in lower south-east history. The majority of his research and writing has been in support of cultural resource investigations, land study histories, cemetery studies, and oral histories. He has published on a variety of subjects including Colonial, Antebellum, and Twentieth-Century topics.`
     return (
         <>
-<Head>
+<Head >
     <title>Home | Historic Studies Limited</title>
     <meta property="og:title" content="Home | Historic Studies Limited"/>
     <meta property="og:type" content="website"/>
