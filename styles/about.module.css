@@ -1,0 +1,86 @@
+.full_env {
+    background: #ebffff;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+@media screen and (min-width: 770px) {
+.d_encompass {
+    margin: 0 auto;
+    padding: 4px 0px;
+    width: 98vw;
+    min-height: 800px;
+    min-width: 500px;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.d_header {
+    height: 275px;
+    width: 100%;
+    z-index: 999;
+}
+.d_cards {
+    position: relative;
+    top: 2px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 2px solid black;
+}
+
+.d_card {
+    margin: auto;
+    width: 100%;
+    border-bottom: 2px solid black;
+}
+
+.d_footer {
+    height: 125px;
+    width: 100%;
+}
+
+}
+
+@media screen and (max-width: 769px) {
+    .d_encompass {
+        margin: 0px auto;
+        padding: 4px 0px;
+        width: 96vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .d_header {
+        height: 80px;
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        z-index: 999;
+    }
+
+    .d_cards {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .d_card {
+        margin: 0px auto 5px auto;
+        width: 98%;
+    }
+
+    .d_footer {
+        margin: auto;
+        height: 90px;
+        width: 98%;
+    }
+    
+}
