@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import Image from 'next/image';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import styles from '../components/component_styles.module.css';
+import styles from './Carousel.module.css';
 import crypt from '/public/static/images/specialty_research/crypt.jpeg';
 import specialty_research_slide from '/public/static/images/specialty_research/Specialty_research_slide.jpeg'
 import goss_reunion from '/public/static/images/specialty_research/goss_reunion.jpg';

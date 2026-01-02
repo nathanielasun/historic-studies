@@ -46,7 +46,6 @@ const Home = ({ content }) => {
             {content.sections.map((section) => (
                 <div key={section.id} className={`${homestyle.d_card}`}>
                     <ImageCard
-                        className={`${homestyle.card}`}
                         variant="image-left"
                         image={{
                             src: section.image.src,

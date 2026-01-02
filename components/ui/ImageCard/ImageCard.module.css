@@ -1,24 +1,128 @@
 /* ImageCard Component Styles */
 /* Unified component supporting all layout variants */
 
-/* PC screen */
-@media screen and (min-width: 770px) {
-    /* Base card styles */
+/* Mobile-first */
+.card {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    border: var(--border-thin);
+    border-radius: var(--radius-lg);
+    background: var(--color-panel);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    gap: var(--space-4);
+    padding: var(--space-4);
+}
+
+.imageLeft,
+.imageRight,
+.imageMiddle,
+.doubleBottom {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: var(--color-surface-alt);
+}
+
+.backgroundBlur {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    object-fit: cover;
+    filter: blur(20px);
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    position: relative;
+    display: block;
+    left: auto;
+    transform: none;
+    z-index: 2;
+    border-radius: var(--radius-md);
+}
+
+.content {
+    margin: auto;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--space-2);
+}
+
+.imageGrid {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title,
+.text {
+    width: 100%;
+    margin: 0px auto;
+    white-space: pre-line;
+}
+
+.title {
+    margin: 0px 0px var(--space-2) 0px;
+    font-size: var(--font-size-lg);
+    text-align: left;
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    letter-spacing: 0.02em;
+}
+
+.text {
+    font-size: var(--font-size-md);
+    text-align: left;
+    line-height: var(--line-height-base);
+    color: var(--color-ink-muted);
+}
+
+/* Desktop */
+@media screen and (min-width: 768px) {
     .card {
-        height: 100%;
-        width: 100%;
-        margin: auto;
-        background: #ebffff;
-        overflow: hidden;
+        padding: var(--space-6);
     }
 
-    /* Layout variants */
     .imageLeft,
     .imageRight,
     .imageMiddle {
-        display: flex;
         flex-direction: row;
         justify-content: center;
+        align-items: center;
+        gap: var(--space-6);
     }
 
     .imageLeft .imageContainer {
@@ -37,11 +141,6 @@
         order: 1;
     }
 
-    .imageMiddle {
-        display: flex;
-        flex-direction: row;
-    }
-
     .imageMiddle .imageContainer:first-child {
         order: 1;
     }
@@ -55,14 +154,11 @@
     }
 
     .doubleBottom {
-        display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
-    /* Image container */
     .imageContainer {
-        position: relative;
         margin: 0px;
         display: flex;
         flex-direction: column;
@@ -70,175 +166,37 @@
     }
 
     .imageWrapper {
-        position: relative;
         margin: auto;
-        padding: 0px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
     }
 
-    /* Background blur effect */
-    .backgroundBlur {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 120%;
-        height: 120%;
-        object-fit: cover;
-        filter: blur(20px);
-        opacity: 0.3;
-        z-index: 1;
-    }
-
-    /* Image styling */
     .image {
-        margin: auto;
-        padding: 0px;
-        position: relative;
-        z-index: 2;
+        width: auto;
+        max-width: 100%;
     }
 
-    /* Content container */
     .content {
-        margin: auto;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        font-family: Georgia, 'Times New Roman', Times, serif;
+        padding: 0px;
     }
 
-    /* Image grid for double-bottom variant */
     .imageGrid {
-        margin: auto;
-        display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        gap: var(--space-4);
     }
 
-    /* Title and text */
     .title,
     .text {
-        width: 80%;
+        width: 100%;
         margin: 0px auto;
     }
 
     .title {
-        margin-bottom: 0px;
-        font-size: 24px;
-        color: black;
+        font-size: var(--font-size-xl);
+        text-align: left;
     }
 
     .text {
-        font-size: 18px;
-        margin: 0px auto 20px auto;
-        white-space: pre-line;
-        line-height: 1.5;
-        text-align: justify;
-    }
-}
-
-/* Mobile screen */
-@media screen and (max-width: 769px) {
-    /* Base card styles */
-    .card {
-        margin: auto;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: stretch;
-        border-top: 2px solid black;
-        border-bottom: 2px solid black;
-    }
-
-    /* All layout variants collapse to column on mobile */
-    .imageLeft,
-    .imageRight,
-    .imageMiddle,
-    .doubleBottom {
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* Image container */
-    .imageContainer {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .imageWrapper {
-        position: relative;
-        width: 100%;
-    }
-
-    /* Background blur effect */
-    .backgroundBlur {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 120%;
-        height: 120%;
-        object-fit: cover;
-        filter: blur(20px);
-        opacity: 0.3;
-        z-index: 1;
-    }
-
-    /* Image styling */
-    .image {
-        max-width: 100%;
-        height: auto;
-        padding: 0px;
-        position: relative;
-        display: block;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 2;
-    }
-
-    /* Content container */
-    .content {
-        margin: auto;
-        padding: 20px 0px;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-    }
-
-    /* Image grid for double-bottom variant */
-    .imageGrid {
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    /* Title and text */
-    .title,
-    .text {
-        width: 90%;
-        margin: 0px auto;
-        white-space: pre-line;
-    }
-
-    .title {
-        margin: 0px;
-        font-size: 18px;
-        text-align: center;
-    }
-
-    .text {
-        font-size: 14px;
-        text-align: justify;
-        line-height: 1.5;
+        font-size: var(--font-size-lg);
+        margin: 0px 0px var(--space-4) 0px;
     }
 }

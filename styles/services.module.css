@@ -1,88 +1,88 @@
 .full_env {
-    background: #ebffff;
-    overflow: scroll;
+    background: transparent;
+    overflow: auto;
+    padding: var(--section-gap-mobile) 0;
 }
 
-@media screen and (min-width: 770px) {
+.d_encompass {
+    margin: 0px auto;
+    width: var(--layout-width-mobile);
+    max-width: var(--layout-max-width);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--section-gap-mobile);
+    padding: var(--panel-padding-mobile);
+    background: var(--color-panel);
+    border: var(--border-thin);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-strong);
+}
+
+.d_header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    z-index: var(--z-overlay);
+}
+
+.d_title {
+    text-align: center;
+}
+
+.title {
+    font-size: var(--font-size-xl);
+    font-family: var(--font-sans);
+    letter-spacing: 0.04em;
+    margin: 0;
+}
+
+.d_dropcard {
+    margin: 0px auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.d_dropcard + .d_dropcard {
+    margin-top: var(--space-5);
+}
+
+.d_footer {
+    margin: 0;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
     .d_encompass {
-        margin: 0 auto;
-        padding: 4px 0px;
-        width: 98vw;
-        min-height: 800px;
-        min-width: 500px;
-        max-width: 1400px;
-        display: flex;
-        flex-direction: column;
+        width: var(--layout-width-desktop);
+        min-width: var(--layout-min-width);
+        max-width: var(--layout-max-width);
+        padding: var(--panel-padding-desktop);
+        gap: var(--section-gap-desktop);
     }
-    
+
     .d_header {
-        height: 275px;
-        width: 100%;
-        z-index: 5;
+        z-index: var(--z-header);
     }
 
     .d_title {
-        height: 100px;
-        text-align: center;
+        height: auto;
     }
 
     .title {
-        font-size: 36px;
-    }
-
-    .d_footer {
-        height: 125px;
-        width: 100%;
-    }
-    
-}
-
-@media screen and (max-width: 769px) {
-    .d_encompass {
-        margin: 0px auto;
-        padding: 4px 0px;
-        width: 96vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .d_header {
-        height: 80px;
-        width: 100%;
-        z-index: 5;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .d_title {
-        text-align: center;
-    }
-
-    .title {
-        font-size: 18px;
-    }
-
-    .d_dropcards {
-        margin: 0px auto;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        font-size: var(--font-size-2xl);
     }
 
     .d_dropcard {
-        margin: 0px auto;
-        width: 98%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+        width: 100%;
     }
 
     .d_footer {
-        margin: auto;
-        height: 90px;
-        width: 98%;
+        width: 100%;
     }
 }

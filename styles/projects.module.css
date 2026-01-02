@@ -1,135 +1,144 @@
 .full_env {
-    background: #ebffff;
+    background: transparent;
     overflow: hidden;
+    padding: var(--section-gap-mobile) 0;
 }
 
-@media screen and (min-width: 770px) {
 .d_encompass {
-    margin: 0 auto;
-    padding: 4px 0px;
-    width: 98vw;
-    min-height: 800px;
-    min-width: 500px;
-    max-width: 1400px;
+    margin: 0px auto;
+    width: var(--layout-width-mobile);
+    max-width: var(--layout-max-width);
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    gap: var(--section-gap-mobile);
+    padding: var(--panel-padding-mobile);
+    background: var(--color-panel);
+    border: var(--border-thin);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-strong);
 }
 
-.d_project_images {
-    display: "flex";
-    flex-direction: "row";
-    justify-content:"center";
+.d_header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    z-index: var(--z-overlay);
 }
-.project_image {
-    margin: auto;
-}
+
 .d_title {
     width: 100%;
-    height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .projects {
-    font-size: 36px;
+    font-size: var(--font-size-xl);
     text-align: center;
-}
-.d_header {
-    height: 275px;
-    width: 100%;
-    z-index: 1;
+    margin: 0;
+    font-family: var(--font-sans);
+    letter-spacing: 0.04em;
 }
 
 .d_cards {
-    margin: 0px;
-    position: relative;
-    top: 2px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--space-5);
+    align-items: stretch;
+}
+
+.d_imagecard {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.d_dropcard {
+    margin: 0;
+    width: 100%;
 }
 
 .d_project_images {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: var(--space-3);
+    padding: var(--space-3);
+    background: var(--color-panel-strong);
+    border: var(--border-thin);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
 }
 
 .project_image {
-    max-width: 100%;
+    margin: auto;
+    max-width: 98%;
     height: auto;
+    border-radius: var(--radius-md);
 }
 
-.d_imagecard {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    border-top: 2px solid black;
-}
-.d_imagecard:last-child {
-    margin: 0px 0px 2px 0px;
-}
+.d_footer {
+    margin: 0;
+    width: 100%;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (min-width: 768px) {
     .d_encompass {
-        margin: 0px auto;
-        padding: 4px 0px;
-        width: 96vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        width: var(--layout-width-desktop);
+        min-width: var(--layout-min-width);
+        max-width: var(--layout-max-width);
+        padding: var(--panel-padding-desktop);
+        gap: var(--section-gap-desktop);
     }
 
     .d_header {
-        height: 80px;
         width: 100%;
-        z-index: 1;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        z-index: 999;
-    }
-    .d_title {
-        width: 100%;
-        height: 80px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .projects {
-        text-align: center;
-    }
-    .d_cards {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
     }
 
-    .d_imagecard {
-        margin: 0px auto 5px auto;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .d_project_images {
-        display: flex;
-        flex-direction:  column;
-        justify-content: center;
-    }
-    
-    .project_image {
-        margin: auto;
-        max-width: 98%;
+    .d_title {
         height: auto;
     }
 
+    .projects {
+        font-size: var(--font-size-2xl);
+    }
+
+    .d_cards {
+        margin: 0px;
+    }
+
+    .d_project_images {
+        flex-direction: row;
+        padding: var(--space-4);
+    }
+
+    .project_image {
+        max-width: 100%;
+    }
+
+    .d_imagecard {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .d_imagecard:last-child {
+        margin: 0;
+    }
+
     .d_dropcard {
-        margin: 5px auto;
-    };
+        width: 100%;
+    }
+
     .d_footer {
-        margin: auto;
-        height: 90px;
-        width: 98%;
+        width: 100%;
     }
 }

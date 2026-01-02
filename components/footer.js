@@ -1,4 +1,4 @@
-import styles from '../components/component_styles.module.css'
+import styles from './footer.module.css'
 import Link from 'next/link'
 
 const Footer = () => {

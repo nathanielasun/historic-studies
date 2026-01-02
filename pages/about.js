@@ -21,7 +21,7 @@ const About = ({ content }) => {
     ).join(' \n')}\n\n${content.charles.bio}`;
 
     // Format company work description with vitae link
-    const companyWork = `${content.company.description}\n\nDownload <a class="footer_link" href="${content.charles.vitae.url}" download>${content.charles.vitae.text}</a>`;
+    const companyWork = `${content.company.description}\n\nDownload <a class="inlineLink" href="${content.charles.vitae.url}" download>${content.charles.vitae.text}</a>`;
 
     return (
         <>
@@ -34,7 +34,7 @@ const About = ({ content }) => {
                     <Header />
                 </div>
                 <div className={styles.d_connect}>
-                        <h1 className={styles.connect} style={{textAlign: "center", position: 'relative', top:"2px"}}>About Charles Philips and HSL</h1>
+                        <h1 className={styles.connect}>About Charles Philips and HSL</h1>
                 </div>
                 <div className={`${styles.d_cards}`}>
                     <div className={`${styles.d_card}`}>

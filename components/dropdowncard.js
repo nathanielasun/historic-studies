@@ -1,8 +1,8 @@
 //component for drop down image card. "+recent projects" and such
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
-import styles from '../components/component_styles.module.css';
+import { useState } from 'react';
+import styles from './dropdowncard.module.css';
 /*
   imageurl - url to image to display on card
   imagealt - alt text for image
@@ -16,10 +16,8 @@ import styles from '../components/component_styles.module.css';
 
 export const DropCard_l = ({ imageurl, imagealt, width, height, title, text, droptext, links }) => {
     const [isExpanded, setIsExpanded] = useState(false); //state of expansion for dropdown
-    const [isAnimating, setIsAnimating] = useState(false); //state of animation for dropdown
     //routine for dropdown animation
     const togglePanel = () => {
-        setIsAnimating(true);
         setIsExpanded(!isExpanded);
       };
     
@@ -35,9 +33,9 @@ export const DropCard_l = ({ imageurl, imagealt, width, height, title, text, dro
                         onClick={togglePanel}
                         style={{          
                             cursor: 'pointer',
-                            transition: 'all 0.3s ease',
-                            backgroundColor: isExpanded ? '#508190' : 'inherit', // Highlight during animation
-                            color: isExpanded ? '#F5FAF1' : 'black',
+                            transition: 'all var(--transition-slow)',
+                            backgroundColor: isExpanded ? 'var(--color-accent)' : 'inherit', // Highlight during animation
+                            color: isExpanded ? 'var(--color-accent-contrast)' : 'var(--color-ink)',
                         }}
                         
                         className={styles.d_paneltoggle}
@@ -47,9 +45,9 @@ export const DropCard_l = ({ imageurl, imagealt, width, height, title, text, dro
                     <div
                         style={{
                             overflow: 'hidden',
-                            transition: 'height 0.3s ease',
+                            transition: 'height var(--transition-slow)',
                             height: isExpanded ? `${40*links.length}px` : 0,
-                            'border-top': isExpanded? '2px solid black' : 'none',
+                            borderTop: isExpanded ? 'var(--border-thin)' : 'none',
                         }}
                         className={styles.d_panellinks}
                     >
@@ -83,13 +81,9 @@ export const DropCard_l = ({ imageurl, imagealt, width, height, title, text, dro
 //copied code for right dropdown panel component
 export const DropCard_r = ({ imageurl, imagealt, width, height, title, text, droptext, links }) => {
     const [isExpanded, setIsExpanded] = useState(false); //state of expansion for dropdown
-    const [isAnimating, setIsAnimating] = useState(false); //state of animation for dropdown
     //routine for dropdown animation
     const togglePanel = () => {
-        setIsAnimating(true);
-
-          setIsExpanded(!isExpanded);
-          setIsAnimating(false);
+        setIsExpanded(!isExpanded);
  // Adjust the delay duration (in milliseconds) as needed
       };
     //routine for handling dropdown animation
@@ -116,9 +110,9 @@ export const DropCard_r = ({ imageurl, imagealt, width, height, title, text, dro
                         onClick={togglePanel}
                         style={{          
                             cursor: 'pointer',
-                            transition: 'all 0.3s ease',
-                            backgroundColor: isExpanded ? '#508190' : 'inherit', // Highlight during expansion
-                            color: isExpanded ? '#F5FAF1' : 'black',
+                            transition: 'all var(--transition-slow)',
+                            backgroundColor: isExpanded ? 'var(--color-accent)' : 'inherit', // Highlight during expansion
+                            color: isExpanded ? 'var(--color-accent-contrast)' : 'var(--color-ink)',
                         }}
                         className={styles.d_paneltoggle}
                     >
@@ -127,9 +121,9 @@ export const DropCard_r = ({ imageurl, imagealt, width, height, title, text, dro
                     <div
                         style={{
                             overflow: 'hidden',
-                            transition: 'height 0.3s ease',
+                            transition: 'height var(--transition-slow)',
                             height: isExpanded ? `${40*links.length}px`: 0,
-                            'border-top': isExpanded ? '2px solid black' : 'none',
+                            borderTop: isExpanded ? 'var(--border-thin)' : 'none',
                         }}
                         className={styles.d_panellinks}
                     >

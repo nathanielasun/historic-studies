@@ -51,23 +51,13 @@ export default function ServiceTemplate({
 
                         // Handle linked titles (for published works)
                         const titleElement = project.titleLink ? (
-                            <Link style={{'textDecoration':'none', 'color':'black'}} target='_blank' href={project.titleLink}>
+                            <Link className="inlineLink" target="_blank" href={project.titleLink}>
                                 {project.title}
                             </Link>
                         ) : project.title;
 
-                        // Determine border style for cultural resources
-                        let borderStyle = {borderTop: "2px solid black"};
-                        if (service.slug === 'cultural-resources') {
-                            borderStyle = index === 0
-                                ? {borderTop: "2px solid black", borderBottom: "2px solid black"}
-                                : index === service.projects.length - 1
-                                    ? {}
-                                    : {borderBottom: "2px solid black"};
-                        }
-
                         return (
-                            <div key={project.id} className={styles.d_dropcard} style={borderStyle}>
+                            <div key={project.id} className={styles.d_dropcard}>
                                 <ImageCard
                                     variant={project.layout}
                                     image={project.image}

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from './component_styles.module.css';
+import styles from './header.module.css';
 import Head from 'next/head';
 import { useState } from 'react';
 //d prefix convention used for div

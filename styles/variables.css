@@ -1,0 +1,80 @@
+:root {
+  /* Colors */
+  --color-surface: #f5f0e6;
+  --color-surface-alt: #ffffff;
+  --color-panel: #fff9f1;
+  --color-panel-strong: #f1e7d9;
+  --color-ink: #1f1a17;
+  --color-ink-muted: #4b4239;
+  --color-accent: #2f5d62;
+  --color-accent-contrast: #fef9f2;
+  --color-accent-soft: #d7e7e5;
+  --color-border: #d8c7b2;
+  --color-border-strong: #2a2420;
+  --color-wash-1: #fdf7ef;
+  --color-wash-2: #e7f1f0;
+  --color-wash-3: #f2e7d7;
+
+  /* Typography */
+  --font-serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", serif;
+  --font-sans: "Gill Sans", "Trebuchet MS", "Optima", sans-serif;
+  --font-size-xs: 10px;
+  --font-size-sm: 12px;
+  --font-size-md: 14px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 36px;
+  --font-size-3xl: 48px;
+  --line-height-base: 1.5;
+
+  /* Spacing */
+  --space-0-5: 2px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 48px;
+  --space-10: 64px;
+  --space-11: 80px;
+
+  /* Layout */
+  --layout-width-desktop: 90vw;
+  --layout-width-mobile: 94vw;
+  --layout-max-width: 1200px;
+  --layout-min-width: 500px;
+  --header-height-desktop: 275px;
+  --header-height-mobile: 80px;
+  --footer-height-desktop: 125px;
+  --footer-height-mobile: 90px;
+  --carousel-height: 400px;
+  --gutter-desktop: 25px;
+  --gutter-mobile: 15px;
+  --panel-padding-mobile: 20px;
+  --panel-padding-desktop: 32px;
+  --section-gap-mobile: 20px;
+  --section-gap-desktop: 32px;
+
+  /* Borders */
+  --border-thin: 1px solid var(--color-border);
+  --border-strong: 2px solid var(--color-border-strong);
+  --border-contrast: 2px solid var(--color-surface-alt);
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* Effects */
+  --shadow-soft: 0 8px 24px rgba(45, 35, 28, 0.12);
+  --shadow-strong: 0 18px 40px rgba(45, 35, 28, 0.2);
+
+  /* Motion */
+  --transition-base: 0.2s ease;
+  --transition-slow: 0.3s ease;
+
+  /* Z-index */
+  --z-header: 10;
+  --z-overlay: 20;
+}

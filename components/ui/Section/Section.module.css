@@ -3,17 +3,17 @@
 /* Base section styles */
 .section {
     width: 100%;
-    padding: 0;
+    padding: var(--section-gap-mobile) 0;
     margin: 0;
 }
 
 /* Background variants */
 .sectionDefault {
-    background: #ebffff;
+    background: transparent;
 }
 
 .sectionAlternate {
-    background: #ffffff;
+    background: var(--color-panel);
 }
 
 .sectionTransparent {
@@ -25,18 +25,15 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 var(--panel-padding-mobile);
 }
 
-/* Responsive padding */
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 768px) {
     .section {
-        padding: 0;
+        padding: var(--section-gap-desktop) 0;
     }
-}
 
-@media screen and (max-width: 769px) {
-    .section {
-        padding: 0;
+    .sectionContainer {
+        padding: 0 var(--panel-padding-desktop);
     }
 }

@@ -1,13 +1,12 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import styles from '../styles/contact.module.css';
-import {Imagecard_l, Imagecard_r} from '../components/imagecard';
+import ImageCard from '../components/ui/ImageCard/ImageCard';
 
 const Contact = () => {
 
-    const contactInfo = `\n\n\n<b>Email:</b> <a href="mailto:cphilips5509@gmail.com">cphilips5509@gmail.com</a>\n\n<b>Telephone:</b> +1 (843)-532-6327\n\n\n\n`;
+    const contactInfo = `\n\n\n<b>Email:</b> <a class="inlineLink" href="mailto:cphilips5509@gmail.com">cphilips5509@gmail.com</a>\n\n<b>Telephone:</b> +1 (843)-532-6327\n\n\n\n`;
 
     return (
         <>
@@ -24,7 +23,17 @@ const Contact = () => {
                     </div>
                 <div className={styles.d_bodycards}>
                     <div className={`${styles.d_card}`}>
-                        <Imagecard_r className={`${styles.card}`} imagealt={"Charles Contact Photo"} width="500" height="330" imageurl={"/static/images/hsl_logo_name.jpg"} title={"Contact Charles F. Philips, Jr."} text={contactInfo} />
+                        <ImageCard
+                            variant="image-right"
+                            image={{
+                                src: "/static/images/hsl_logo_name.jpg",
+                                alt: "Charles Contact Photo",
+                                width: 500,
+                                height: 330
+                            }}
+                            title="Contact Charles F. Philips, Jr."
+                            text={contactInfo}
+                        />
                     </div>
                 </div>
                 <div className={`${styles.d_footer}`}>

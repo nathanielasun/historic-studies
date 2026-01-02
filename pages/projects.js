@@ -1,10 +1,8 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import Header from '../components/header';
 import Footer from '../components/footer';
-import {Imagecard_l, Imagecard_m, Imagecard_r} from '../components/imagecard';
 import Image from 'next/image';
-import {DropCard_l, DropCard_r} from '../components/dropdowncard';
+import ImageCard from '../components/ui/ImageCard/ImageCard';
 import styles from '../styles/projects.module.css';
 
 const Projects = () => {
@@ -29,17 +27,59 @@ const Projects = () => {
                         <h1 className={styles.projects}>Example Projects</h1>
                     </div>
                     <div className={`${styles.d_imagecard}`}>
-                        <Imagecard_r className={`${styles.card}`} imagealt={"Little Edisto Aerial Map"} width="333" height="480" imageurl={"/static/images/specialty_research/aerial_edisto_map.png"} title={"Little Edisto Marsh Grant"} text={aerialEdisto} />
+                        <ImageCard
+                            variant="image-right"
+                            image={{
+                                src: "/static/images/specialty_research/aerial_edisto_map.png",
+                                alt: "Little Edisto Aerial Map",
+                                width: 333,
+                                height: 480
+                            }}
+                            title="Little Edisto Marsh Grant"
+                            text={aerialEdisto}
+                        />
                     </div>
                     <div className={`${styles.d_imagecard}`}>
-                        <Imagecard_l className={`${styles.card}`} imagealt={"Dean Hall Work"} width="426" height="320" imageurl={"/static/images/cultural_resources/Colonaware_at Dean_Hall.jpg"} title={"Dean Hall Plantation Slave Row (38BK2132)"} text={deanHall} />
+                        <ImageCard
+                            variant="image-left"
+                            image={{
+                                src: "/static/images/cultural_resources/Colonaware_at Dean_Hall.jpg",
+                                alt: "Dean Hall Work",
+                                width: 426,
+                                height: 320
+                            }}
+                            title="Dean Hall Plantation Slave Row (38BK2132)"
+                            text={deanHall}
+                        />
                     </div>
-                    <div className={styles.d_project_images} style={{borderTop: "2px solid black"}}>
-                        <Image className={styles.project_image} width={800/2} height={627/2} src="/static/images/cultural_resources/dean_hall_plantation.png"/>
-                        <Image className={styles.project_image} width={496/2} height={640/2} src="/static/images/cultural_resources/dean_hall_vol_1.png" />
+                    <div className={styles.d_project_images}>
+                        <Image
+                            className={styles.project_image}
+                            width={800 / 2}
+                            height={627 / 2}
+                            alt="Dean Hall plantation overview"
+                            src="/static/images/cultural_resources/dean_hall_plantation.png"
+                        />
+                        <Image
+                            className={styles.project_image}
+                            width={496 / 2}
+                            height={640 / 2}
+                            alt="Dean Hall report cover"
+                            src="/static/images/cultural_resources/dean_hall_vol_1.png"
+                        />
                     </div>
-                    <div className={styles.d_dropcard} style={{borderTop: "2px solid black", borderBottom: "2px solid black"}}>
-                        <Imagecard_l imageurl={"/static/images/specialty_research/new_gaillard_graves.png"} imagealt={`new gaillard gravesite`} width={586} height={440} title={`Gaillard Graves Project`} text={gaillardGraves}/>
+                    <div className={styles.d_dropcard}>
+                        <ImageCard
+                            variant="image-left"
+                            image={{
+                                src: "/static/images/specialty_research/new_gaillard_graves.png",
+                                alt: "New Gaillard gravesite",
+                                width: 586,
+                                height: 440
+                            }}
+                            title="Gaillard Graves Project"
+                            text={gaillardGraves}
+                        />
                     </div>
                 </div>
                 <div className={`${styles.d_footer}`}>
