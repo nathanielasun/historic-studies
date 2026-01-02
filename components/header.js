@@ -3,8 +3,6 @@ import Image from 'next/image';
 import styles from './component_styles.module.css';
 import Head from 'next/head';
 import { useState } from 'react';
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/next';
 //d prefix convention used for div
 //m suffix convention used for mobile
 
@@ -18,7 +16,6 @@ const Header = () => {
     return (
         <>
         <Head>
-            <link rel="icon" href="./static/images/favicon.png" sizes="any" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         </Head>
         <div className={`${styles.d_header}`}>
@@ -109,8 +106,6 @@ const Header = () => {
                     <li className={styles.pagelist_item_m}><Link className={styles.pagelist_link_m} href="../contact">CONTACT</Link></li>
                 </ul>
             </div>
-            <Analytics />
-            <SpeedInsights />
         </div>
         </>
     )

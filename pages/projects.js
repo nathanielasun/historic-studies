@@ -38,11 +38,7 @@ const Projects = () => {
                         <Image className={styles.project_image} width={800/2} height={627/2} src="/static/images/cultural_resources/dean_hall_plantation.png"/>
                         <Image className={styles.project_image} width={496/2} height={640/2} src="/static/images/cultural_resources/dean_hall_vol_1.png" />
                     </div>
-<<<<<<< HEAD
                     <div className={styles.d_dropcard} style={{borderTop: "2px solid black", borderBottom: "2px solid black"}}>
-=======
-                    <div className={styles.d_dropcard} style={{borderTop: "2px solid black"}}>
->>>>>>> dcb092b9 (website fixed publications)
                         <Imagecard_l imageurl={"/static/images/specialty_research/new_gaillard_graves.png"} imagealt={`new gaillard gravesite`} width={586} height={440} title={`Gaillard Graves Project`} text={gaillardGraves}/>
                     </div>
                 </div>
