@@ -1,0 +1,244 @@
+/* ImageCard Component Styles */
+/* Unified component supporting all layout variants */
+
+/* PC screen */
+@media screen and (min-width: 770px) {
+    /* Base card styles */
+    .card {
+        height: 100%;
+        width: 100%;
+        margin: auto;
+        background: #ebffff;
+        overflow: hidden;
+    }
+
+    /* Layout variants */
+    .imageLeft,
+    .imageRight,
+    .imageMiddle {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .imageLeft .imageContainer {
+        order: 1;
+    }
+
+    .imageLeft .content {
+        order: 2;
+    }
+
+    .imageRight .imageContainer {
+        order: 2;
+    }
+
+    .imageRight .content {
+        order: 1;
+    }
+
+    .imageMiddle {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .imageMiddle .imageContainer:first-child {
+        order: 1;
+    }
+
+    .imageMiddle .content {
+        order: 2;
+    }
+
+    .imageMiddle .imageContainer:last-child {
+        order: 3;
+    }
+
+    .doubleBottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* Image container */
+    .imageContainer {
+        position: relative;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .imageWrapper {
+        position: relative;
+        margin: auto;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* Background blur effect */
+    .backgroundBlur {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 120%;
+        height: 120%;
+        object-fit: cover;
+        filter: blur(20px);
+        opacity: 0.3;
+        z-index: 1;
+    }
+
+    /* Image styling */
+    .image {
+        margin: auto;
+        padding: 0px;
+        position: relative;
+        z-index: 2;
+    }
+
+    /* Content container */
+    .content {
+        margin: auto;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    /* Image grid for double-bottom variant */
+    .imageGrid {
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    /* Title and text */
+    .title,
+    .text {
+        width: 80%;
+        margin: 0px auto;
+    }
+
+    .title {
+        margin-bottom: 0px;
+        font-size: 24px;
+        color: black;
+    }
+
+    .text {
+        font-size: 18px;
+        margin: 0px auto 20px auto;
+        white-space: pre-line;
+        line-height: 1.5;
+        text-align: justify;
+    }
+}
+
+/* Mobile screen */
+@media screen and (max-width: 769px) {
+    /* Base card styles */
+    .card {
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+    }
+
+    /* All layout variants collapse to column on mobile */
+    .imageLeft,
+    .imageRight,
+    .imageMiddle,
+    .doubleBottom {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Image container */
+    .imageContainer {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .imageWrapper {
+        position: relative;
+        width: 100%;
+    }
+
+    /* Background blur effect */
+    .backgroundBlur {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 120%;
+        height: 120%;
+        object-fit: cover;
+        filter: blur(20px);
+        opacity: 0.3;
+        z-index: 1;
+    }
+
+    /* Image styling */
+    .image {
+        max-width: 100%;
+        height: auto;
+        padding: 0px;
+        position: relative;
+        display: block;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+
+    /* Content container */
+    .content {
+        margin: auto;
+        padding: 20px 0px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    /* Image grid for double-bottom variant */
+    .imageGrid {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* Title and text */
+    .title,
+    .text {
+        width: 90%;
+        margin: 0px auto;
+        white-space: pre-line;
+    }
+
+    .title {
+        margin: 0px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .text {
+        font-size: 14px;
+        text-align: justify;
+        line-height: 1.5;
+    }
+}

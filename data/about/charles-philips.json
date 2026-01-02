@@ -1,0 +1,27 @@
+{
+  "name": "Charles F. Philips, Jr.",
+  "title": "Founder, Historic Studies Limited",
+  "education": [
+    {
+      "degree": "B.A.",
+      "institution": "Mercer University",
+      "year": 1975
+    },
+    {
+      "degree": "M.A.",
+      "institution": "Citadel/College of Charleston",
+      "year": 2002
+    }
+  ],
+  "image": {
+    "src": "/static/images/people/CFP_library_ded.png",
+    "alt": "A photo of Charles Philips",
+    "width": 335,
+    "height": 405
+  },
+  "bio": "Charles F. Philips, Jr. has been in business as Historic Studies Limited, LLC since October of 2021. Prior to that he served as a Senior Historian, Project and Program Manager in the Charleston office of Brockington and Associates. He has worked on over a thousand projects in North Carolina, South Carolina, Georgia, and Florida. He served as Program Manager for Brockington's Land Studies, King's Grant applications, Oral History programs, and Genealogy Outreach Programs. He managed the historic studies of projects as diverse as the 80,000-acre, East Edisto development for Dorchester and Charleston counties, SC, inland rice contextual study for the South Carolina State Historic Preservation Office, heritage studies in St. Johns County, Florida, and land studies for Fort Stewart, Georgia.",
+  "vitae": {
+    "url": "/static/images/about/Philips_Charles_Vitae.pdf",
+    "text": "full vitae"
+  }
+}

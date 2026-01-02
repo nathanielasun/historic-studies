@@ -1,0 +1,34 @@
+{
+  "siteName": "Historic Studies Limited",
+  "tagline": "Historical Research and Archival Analysis",
+  "description": "Professional historical research services specializing in archival studies, genealogy, oral history projects, and cultural resource management in the South Carolina Lowcountry.",
+  "owner": "Charles Philips",
+  "copyright": {
+    "owner": "Historic Studies Limited",
+    "startYear": 2023
+  },
+  "contact": {
+    "email": "cphilips5509@gmail.com",
+    "phone": "843-532-6327",
+    "name": "Charles Philips"
+  },
+  "social": {
+    "facebook": "",
+    "instagram": "",
+    "twitter": ""
+  },
+  "metadata": {
+    "keywords": [
+      "historical research",
+      "archival analysis",
+      "South Carolina history",
+      "genealogy",
+      "oral history",
+      "cultural resources",
+      "Charleston history",
+      "Lowcountry history"
+    ],
+    "author": "Charles Philips",
+    "ogImage": "/static/images/hsl_logo.jpg"
+  }
+}

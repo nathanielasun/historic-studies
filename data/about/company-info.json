@@ -1,0 +1,22 @@
+{
+  "title": "HSL's Work",
+  "image": {
+    "src": "/static/images/about/CFP_presentation.JPG",
+    "alt": "Charles Philips presenting his work",
+    "width": 454,
+    "height": 420
+  },
+  "description": "Mr. Philips has been involved in supporting client's efforts to establish a King's Grant to claim marshlands and the research component in the South Carolina County Boundaries Project by the South Carolina Geodetic Survey. He has written more than a dozen private land study histories working for families and companies that own historic lands in South Carolina, Georgia, and Florida. As the company oral historian, he is an active member of the Oral History Association where he has been a member of the Education Committee (2019-2023). He has conducted or managed more than 350 oral histories. The oral history program has also led Mr. Philips to work on Brockington's African American descendants' outreach. Mr. Philips has published separate works on a range of topics including the Mobile District US Army Corps of Engineers, the Phosphate Mining Industry in the South Carolina Lowcountry, the Gateway National Recreation Area in New York City.",
+  "specialties": [
+    "King's Grant applications",
+    "Land study histories",
+    "Oral history projects (350+ conducted)",
+    "African American descendants' outreach",
+    "Genealogy research",
+    "Cultural resource management"
+  ],
+  "experience": {
+    "totalProjects": 1000,
+    "states": ["North Carolina", "South Carolina", "Georgia", "Florida"]
+  }
+}

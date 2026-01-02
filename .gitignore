@@ -6,6 +6,9 @@ node_modules
 .yarn
 .claude
 
+#local development files
+WEBSITE_RESTRUCTURING.md
+COMPLETED_UPDATES.md
 # next.js
 .next/*
 

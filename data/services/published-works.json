@@ -1,0 +1,67 @@
+{
+  "slug": "published-works",
+  "title": "Published Works",
+  "pageTitle": "Published Works | Historic Studies Limited",
+  "description": "Academic and professional publications on historical topics ranging from cultural resource studies to government agency histories and infrastructure analysis.",
+  "meta": {
+    "title": "Published Works | Historic Studies Limited",
+    "ogTitle": "Published Works | Historic Studies Limited",
+    "ogType": "website",
+    "description": "Historic Studies Limited is operated by Charles Philips, a freelance historian who seeks to provide the best research and analysis on historical sites and landmarks, King's grants, and cemeteries. He also develops oral history projects and home and land history studies."
+  },
+  "projects": [
+    {
+      "id": "mobile-goes",
+      "title": "As Mobile Goes, So Goes the Corps",
+      "titleLink": "https://commons.wikimedia.org/wiki/File:As_Mobile_goes,_so_goes_the_Corps-_A_look_at_change_inside_a_government_agency_-_USACE-p16021coll4-135.pdf",
+      "layout": "image-left",
+      "year": 2006,
+      "description": "In 2006, Ralph Bailey, Jr. and Charles F. Philips, Jr. documented the Mobile District, US Army Corps of Engineers' cultural shift from a hierarchical \"stovepipe\" structure to a collaborative \"Lifecycle/Project Management\" approach between 1985-2003. This change, prompted by expanding roles in environmental protection and emergency management, marked a departure from traditional priorities like military construction. Civilian and military personnel both adapted to these changes, with oral histories from 51 participants forming the foundation of the narrative. Bailey oversaw the project, while Philips conducted the research and writing.",
+      "client": {
+        "name": "Mobile District, US Army Corps of Engineers",
+        "location": "Mobile, Alabama"
+      },
+      "image": {
+        "src": "/static/images/published_works/as_mobile_goes.png",
+        "alt": "Photo of As Mobile Goes cover",
+        "width": 334,
+        "height": 432
+      }
+    },
+    {
+      "id": "inland-rice",
+      "title": "South Carolina Inland Rice Context",
+      "layout": "image-right",
+      "year": 2011,
+      "description": "Between 2009 and 2011, Andrew Agha and Charles Philips of Brockington and Associates conducted an intensive study of over 20 inland rice field complexes in the Greater Charleston area. The project, tied to mitigation efforts for the Palmetto Commerce Parkway, focused on mapping and evaluating 11 sites to create an Inland Rice Contextual Study for the South Carolina State Historic Preservation Office. This study established criteria for identifying and assessing key components of inland rice fields, influencing the SHPO's 2011 Rice Fields and Section 106 guidelines.\n\nThe eighteenth century plat adjacent shows the Hays Ingleside rice plantation in Charleston County, SC.",
+      "client": {
+        "name": "South Carolina State Historic Preservation Office",
+        "location": "South Carolina"
+      },
+      "image": {
+        "src": "/static/images/published_works/hays_ingleside_plantation.png",
+        "alt": "Photo of Hays Ingleside plantation",
+        "width": 400,
+        "height": 550
+      }
+    },
+    {
+      "id": "bureau-reclamation",
+      "title": "U.S. Bureau of Reclamation Water Conveyance Systems in the West Context and Evaluation Guidance",
+      "titleLink": "https://history.idaho.gov/wp-content/uploads/5865-BOR-Wtr-Control-Structures-Context-SEPTFINAL.pdf",
+      "layout": "image-left",
+      "year": 2021,
+      "description": "In 2021, NDN Company and Brockington, commissioned by the U.S. Bureau of Reclamation, conducted a study of historic water conveyance systems across 180 projects in 17 states in the American West. Excluding dams and reservoirs, the research focused on features like canals, headgates, flumes, and measuring devices, analyzing their construction materials and historical use periods. Despite pandemic-related challenges requiring all research to be conducted online, Charles Philips led the study portion, while Ms. Stallings authored the evaluation section.",
+      "client": {
+        "name": "U.S. Bureau of Reclamation",
+        "location": "Western United States"
+      },
+      "image": {
+        "src": "/static/images/published_works/bor_water_control_structure.png",
+        "alt": "Photo of BOR water control structure",
+        "width": 429,
+        "height": 543
+      }
+    }
+  ]
+}

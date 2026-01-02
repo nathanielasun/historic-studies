@@ -1,0 +1,62 @@
+{
+  "main": [
+    {
+      "label": "HOME",
+      "href": "/",
+      "exact": true
+    },
+    {
+      "label": "ABOUT",
+      "href": "/about"
+    },
+    {
+      "label": "SERVICES",
+      "href": "/services",
+      "hasDropdown": true,
+      "dropdown": [
+        {
+          "label": "Specialty Research",
+          "href": "/services/specialty-research"
+        },
+        {
+          "label": "Oral History Projects",
+          "href": "/services/oral-history"
+        },
+        {
+          "label": "Published Works",
+          "href": "/services/published-works"
+        },
+        {
+          "label": "Cultural Resources",
+          "href": "/services/cultural-resources"
+        }
+      ]
+    },
+    {
+      "label": "PROJECTS",
+      "href": "/projects"
+    },
+    {
+      "label": "CONTACT",
+      "href": "/contact"
+    }
+  ],
+  "footer": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "About",
+      "href": "/about"
+    },
+    {
+      "label": "Projects",
+      "href": "/projects"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact"
+    }
+  ]
+}

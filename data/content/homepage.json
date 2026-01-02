@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "title": "Home | Historic Studies Limited",
+    "description": "Historic Studies Limited is operated by Charles Philips, a freelance historian who seeks to provide the best research and analysis on historical sites and landmarks, King's grants, and cemeteries. He also develops oral history projects and home and land history studies.",
+    "ogTitle": "Home | Historic Studies Limited",
+    "ogType": "website"
+  },
+  "hero": {
+    "image": {
+      "src": "/static/images/byline.png",
+      "alt": "Historic Studies Limited - Professional Historical Research",
+      "width": 1440,
+      "height": 720
+    }
+  },
+  "sections": [
+    {
+      "id": "work-with-hsl",
+      "layout": "image-left",
+      "title": "Work with HSL",
+      "image": {
+        "src": "/static/images/oral_history/CFP_and_PCG_interview.png",
+        "alt": "Photo of HSL team working",
+        "width": 400,
+        "height": 300
+      },
+      "content": "Historic Studies Limited is an organization dedicated to comprehensive historic research, specializing in resolving intricate cultural resource challenges. Our primary focus lies in meticulous historic deed research, with expertise in navigating 18th and 19th-century archives.\n\nPerhaps you need...\n• A cultural resource study\n• A King's Grant, boundary, or easement study\n• An oral history of a near-forgotten community\n• A documented photographic coffee table style family history\n• Information on a community/family cemetery\n\nThese and many other projects require expertise in legal, archival, and family records, then interpreting those records to provide a context. Contact us. We discover the past for you today that helps prepare your future."
+    }
+  ],
+  "carousel": {
+    "enabled": true
+  }
+}

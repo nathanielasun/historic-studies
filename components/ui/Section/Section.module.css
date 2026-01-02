@@ -1,0 +1,42 @@
+/* Section Component Styles */
+
+/* Base section styles */
+.section {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* Background variants */
+.sectionDefault {
+    background: #ebffff;
+}
+
+.sectionAlternate {
+    background: #ffffff;
+}
+
+.sectionTransparent {
+    background: transparent;
+}
+
+/* Container for section content */
+.sectionContainer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Responsive padding */
+@media screen and (min-width: 770px) {
+    .section {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .section {
+        padding: 0;
+    }
+}
