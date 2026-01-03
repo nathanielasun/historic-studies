@@ -248,8 +248,8 @@ export default function ContactForm() {
             {status === 'error' && (
                 <div className={styles.errorMessage} role="alert" aria-live="assertive">
                     ✗ Failed to send message. Please try again or email directly at{' '}
-                    <a href="mailto:cphilips5509@gmail.com" className="inlineLink">
-                        cphilips5509@gmail.com
+                    <a href="mailto:charlie@historicstudies.com" className="inlineLink">
+                        charlie@historicstudies.com
                     </a>
                 </div>
             )}

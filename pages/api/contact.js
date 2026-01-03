@@ -154,19 +154,19 @@ export default async function handler(req, res) {
         ));
     }
 
-    // Check if Resend API key is configured
-    if (!process.env.RESEND_API_KEY) {
-        console.error('RESEND_API_KEY not configured');
+    // Check if Gmail SMTP credentials are configured
+    if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
+        console.error('Gmail SMTP credentials not configured');
         return res.status(500).json(withDebug(
             { error: 'Email service not configured. Please contact the administrator.' },
-            { hasApiKey: false }
+            { hasGmailUser: !!process.env.GMAIL_USER, hasAppPassword: !!process.env.GMAIL_APP_PASSWORD }
         ));
     }
 
     // Resolve recipient and sender details
     const siteConfig = getSiteConfig();
     const recipientEmail = process.env.CONTACT_TO_EMAIL || siteConfig?.contact?.email;
-    const fromAddress = process.env.RESEND_FROM_EMAIL || '<anything>@dezenua.resend.app>';
+    const fromAddress = process.env.GMAIL_USER; // Gmail account sending emails
 
     if (!recipientEmail) {
         console.error('Contact recipient email not configured');
@@ -177,9 +177,19 @@ export default async function handler(req, res) {
     }
 
     try {
-        // Import Resend
-        const { Resend } = require('resend');
-        const resend = new Resend(process.env.RESEND_API_KEY);
+        // Import nodemailer
+        const nodemailer = require('nodemailer');
+
+        // Create transporter using Gmail SMTP
+        const transporter = nodemailer.createTransport({
+            host: 'smtp.gmail.com',
+            port: 587,
+            secure: false, // Use TLS
+            auth: {
+                user: process.env.GMAIL_USER,
+                pass: process.env.GMAIL_APP_PASSWORD
+            }
+        });
 
         // Sanitize inputs for HTML display
         const sanitizedName = sanitize(name.trim());
@@ -188,8 +198,8 @@ export default async function handler(req, res) {
         const sanitizedMessage = sanitize(message.trim());
 
         // Send email
-        const { data, error } = await resend.emails.send({
-            from: fromAddress, // Use verified domain in production
+        const info = await transporter.sendMail({
+            from: `"Historic Studies Limited" <${fromAddress}>`,
             to: recipientEmail,
             replyTo: email.trim(), // User's email for easy replies
             subject: `Website Contact: ${subject.trim()}`,
@@ -236,26 +246,13 @@ export default async function handler(req, res) {
             `,
         });
 
-        if (error) {
-            console.error('Resend error:', error);
-            return res.status(502).json(withDebug(
-                { error: 'Failed to send email. Please try again or contact us directly.' },
-                {
-                    resendError: error,
-                    from: fromAddress,
-                    to: recipientEmail,
-                    subject: `Website Contact: ${subject.trim()}`
-                }
-            ));
-        }
-
-        console.log('Email sent successfully:', data?.id);
+        console.log('Email sent successfully:', info.messageId);
 
         return res.status(200).json(withDebug(
             {
                 success: true,
                 message: 'Email sent successfully',
-                id: data?.id
+                id: info.messageId
             },
             {
                 from: fromAddress,
@@ -268,9 +265,10 @@ export default async function handler(req, res) {
 
         // Don't expose detailed error to client
         return res.status(500).json(withDebug(
-            { error: 'Failed to send email. Please try again or contact us directly at cphilips5509@gmail.com' },
+            { error: 'Failed to send email. Please try again or contact us directly at charlie@historicstudies.com' },
             {
                 message: error?.message || String(error),
+                code: error?.code,
                 from: fromAddress,
                 to: recipientEmail
             }
