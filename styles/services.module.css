@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: var(--section-gap-mobile);
+    gap: var(--space-5);
     padding: var(--panel-padding-mobile);
     background: var(--color-panel);
     border: var(--border-thin);
@@ -63,7 +63,7 @@
         min-width: var(--layout-min-width);
         max-width: var(--layout-max-width);
         padding: var(--panel-padding-desktop);
-        gap: var(--section-gap-desktop);
+        gap: var(--space-6);
     }
 
     .d_header {

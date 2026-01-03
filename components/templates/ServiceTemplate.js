@@ -1,13 +1,12 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import Header from '../header';
 import Footer from '../footer';
-import ImageCard from '../ui/ImageCard/ImageCard';
+import TimelineContainer from '../ui/Timeline/TimelineContainer';
 import styles from '../../styles/services.module.css';
 
 /**
  * ServiceTemplate component - Reusable template for all service pages
- * Eliminates code duplication across service pages
+ * Uses new timeline-based layout with modular cards
  *
  * @param {Object} props
  * @param {Object} props.service - Service data from JSON
@@ -38,36 +37,10 @@ export default function ServiceTemplate({
                     <div className={styles.d_title}>
                         <h1 className={styles.title}>{service.title} {titleSuffix}</h1>
                     </div>
-                    {service.projects.map((project, index) => {
-                        // Build project text with optional client info
-                        let projectText = project.description;
-
-                        if (showClient && project.client) {
-                            const clientLocation = project.client.location
-                                ? `, ${project.client.location}`
-                                : '';
-                            projectText += `\n\n(Client: ${project.client.name}${clientLocation})`;
-                        }
-
-                        // Handle linked titles (for published works)
-                        const titleElement = project.titleLink ? (
-                            <Link className="inlineLink" target="_blank" href={project.titleLink}>
-                                {project.title}
-                            </Link>
-                        ) : project.title;
-
-                        return (
-                            <div key={project.id} className={styles.d_dropcard}>
-                                <ImageCard
-                                    variant={project.layout}
-                                    image={project.image}
-                                    images={project.images}
-                                    title={titleElement}
-                                    text={projectText}
-                                />
-                            </div>
-                        );
-                    })}
+                    <TimelineContainer
+                        projects={service.projects}
+                        showClient={showClient}
+                    />
                     <div className={`${styles.d_footer}`}>
                         <Footer />
                     </div>

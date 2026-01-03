@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Header from '../components/header'
 import Footer from '../components/footer'
-import ImageCard from '../components/ui/ImageCard/ImageCard'
+import TimelineContainer from '../components/ui/Timeline/TimelineContainer'
 import styles from '../styles/about.module.css'
 import { getAboutContent } from '../lib/content'
 
@@ -23,6 +23,32 @@ const About = ({ content }) => {
     // Format company work description with vitae link
     const companyWork = `${content.company.description}\n\nDownload <a class="inlineLink" href="${content.charles.vitae.url}" download>${content.charles.vitae.text}</a>`;
 
+    // Convert to timeline format
+    const projects = [
+        {
+            id: 'charles-philips',
+            title: content.charles.name,
+            description: charlesBio,
+            image: {
+                src: content.charles.image.src,
+                alt: content.charles.image.alt,
+                width: content.charles.image.width,
+                height: content.charles.image.height
+            }
+        },
+        {
+            id: 'hsl-work',
+            title: content.company.title,
+            description: companyWork,
+            image: {
+                src: content.company.image.src,
+                alt: content.company.image.alt,
+                width: content.company.image.width,
+                height: content.company.image.height
+            }
+        }
+    ];
+
     return (
         <>
         <Head>
@@ -34,36 +60,12 @@ const About = ({ content }) => {
                     <Header />
                 </div>
                 <div className={styles.d_connect}>
-                        <h1 className={styles.connect}>About Charles Philips and HSL</h1>
+                    <h1 className={styles.connect}>About Charles Philips and HSL</h1>
                 </div>
-                <div className={`${styles.d_cards}`}>
-                    <div className={`${styles.d_card}`}>
-                        <ImageCard
-                            variant="image-left"
-                            image={{
-                                src: content.charles.image.src,
-                                alt: content.charles.image.alt,
-                                width: content.charles.image.width,
-                                height: content.charles.image.height
-                            }}
-                            title={content.charles.name}
-                            text={charlesBio}
-                        />
-                    </div>
-                    <div className={`${styles.d_card}`}>
-                        <ImageCard
-                            variant="image-right"
-                            image={{
-                                src: content.company.image.src,
-                                alt: content.company.image.alt,
-                                width: content.company.image.width,
-                                height: content.company.image.height
-                            }}
-                            title={content.company.title}
-                            text={companyWork}
-                        />
-                    </div>
-                </div>
+                <TimelineContainer
+                    projects={projects}
+                    showClient={false}
+                />
                 <div className={`${styles.d_footer}`}>
                     <Footer />
                 </div>

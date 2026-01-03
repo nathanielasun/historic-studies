@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import Carousel from '../components/carousel'
-import ImageCard from '../components/ui/ImageCard/ImageCard';
+import TimelineContainer from '../components/ui/Timeline/TimelineContainer';
 import homestyle from '../styles/home.module.css';
 import Image from 'next/image';
 import { getHomepageContent } from '../lib/content';
@@ -17,6 +17,19 @@ export async function getStaticProps() {
 }
 
 const Home = ({ content }) => {
+    // Convert sections to timeline format
+    const projects = content.sections.map((section) => ({
+        id: section.id,
+        title: section.title,
+        description: section.content,
+        image: {
+            src: section.image.src,
+            alt: section.image.alt,
+            width: section.image.width,
+            height: section.image.height
+        }
+    }));
+
     return (
         <>
 <Head >
@@ -42,23 +55,10 @@ const Home = ({ content }) => {
         <div className={`${homestyle.d_carousel}`}>
             <Carousel />
         </div>
-        <div className={`${homestyle.d_cards}`}>
-            {content.sections.map((section) => (
-                <div key={section.id} className={`${homestyle.d_card}`}>
-                    <ImageCard
-                        variant="image-left"
-                        image={{
-                            src: section.image.src,
-                            alt: section.image.alt,
-                            width: section.image.width,
-                            height: section.image.height
-                        }}
-                        title={section.title}
-                        text={section.content}
-                    />
-                </div>
-            ))}
-        </div>
+        <TimelineContainer
+            projects={projects}
+            showClient={false}
+        />
         <div className={`${homestyle.d_footer}`}>
             <Footer />
         </div>

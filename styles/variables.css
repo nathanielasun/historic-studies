@@ -77,4 +77,13 @@
   /* Z-index */
   --z-header: 10;
   --z-overlay: 20;
+
+  /* Timeline */
+  --timeline-connector-color: var(--color-accent);
+  --timeline-connector-width: 2px;
+  --timeline-node-size: 8px;
+  --timeline-node-color: var(--color-accent);
+  --timeline-zone-even: transparent;
+  --timeline-zone-odd: var(--color-wash-1);
+  --timeline-gap: var(--space-8);
 }

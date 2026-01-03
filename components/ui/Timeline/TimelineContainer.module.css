@@ -1,0 +1,14 @@
+/* TimelineContainer Styles */
+
+.timeline {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+}
+
+/* Each project group flows continuously without extra spacing */
+.timeline > * + * {
+    margin-top: 0;
+}

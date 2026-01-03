@@ -1,0 +1,105 @@
+/* ProjectGroup Styles - Fluid Layout */
+
+.projectGroup {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-4) var(--space-4);
+    position: relative;
+    transition: background-color var(--transition-base);
+    min-height: auto;
+}
+
+/* Alternating background zones */
+.projectGroup[data-zone="even"] {
+    background-color: transparent;
+}
+
+.projectGroup[data-zone="odd"] {
+    background-color: var(--timeline-zone-odd, var(--color-wash-1));
+}
+
+/* Mobile: Stack vertically */
+.cardArea {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.connectorArea {
+    display: none; /* Hide on mobile for simplicity */
+}
+
+.imageArea {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+/* Desktop: Side-by-side with artistic offsets */
+@media screen and (min-width: 768px) {
+    .projectGroup {
+        position: relative;
+        padding: var(--space-4) var(--space-6);
+        min-height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-4);
+    }
+
+    .cardArea,
+    .imageArea {
+        position: relative;
+        width: 47%;
+        flex-shrink: 0;
+    }
+
+    /* Apply artistic transform offsets */
+    .cardArea {
+        transform: translate(var(--card-offset-x, 0), var(--card-offset-y, 0));
+    }
+
+    .imageArea {
+        transform: translate(var(--image-offset-x, 0), var(--image-offset-y, 0));
+    }
+
+    /* Image-left variant: image on left, card on right */
+    .imageLeft {
+        flex-direction: row;
+    }
+
+    .imageLeft .cardArea {
+        order: 2;
+    }
+
+    .imageLeft .imageArea {
+        order: 1;
+    }
+
+    /* Image-right variant: card on left, image on right */
+    .imageRight {
+        flex-direction: row;
+    }
+
+    .imageRight .cardArea {
+        order: 1;
+    }
+
+    .imageRight .imageArea {
+        order: 2;
+    }
+
+    .connectorArea {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        pointer-events: none;
+    }
+}
