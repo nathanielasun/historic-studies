@@ -1,0 +1,193 @@
+/* ContactForm Component Styles */
+/* Mobile-first design using design tokens */
+
+.form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+}
+
+/* Honeypot field - completely hidden */
+.honeypot {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Field group */
+.fieldGroup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+/* Labels */
+.label {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-md);
+    font-weight: 600;
+    color: var(--color-ink);
+    display: block;
+}
+
+.required {
+    color: #c44;
+    font-weight: normal;
+}
+
+/* Input fields */
+.input,
+.textarea {
+    width: 100%;
+    padding: var(--space-3);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-md);
+    color: var(--color-ink);
+    background: var(--color-surface);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-md);
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.input:focus,
+.textarea:focus {
+    border-color: var(--color-theme);
+    box-shadow: 0 0 0 3px rgba(80, 129, 144, 0.1);
+}
+
+.input:disabled,
+.textarea:disabled {
+    background: var(--color-surface-alt);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.inputError {
+    border-color: #c44;
+}
+
+.inputError:focus {
+    box-shadow: 0 0 0 3px rgba(204, 68, 68, 0.1);
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 150px;
+    line-height: var(--line-height-base);
+}
+
+/* Error message */
+.error {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-sm);
+    color: #c44;
+    display: block;
+    margin-top: var(--space-1);
+}
+
+/* Submit button */
+.button {
+    padding: var(--space-3) var(--space-6);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-md);
+    font-weight: 600;
+    color: var(--color-text-light);
+    background: var(--color-theme);
+    border: 2px solid var(--color-accent);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.button:hover {
+    background: #3d6574;
+    border-color: #3d6574;
+}
+
+.button:focus {
+    box-shadow: 0 0 0 3px rgba(80, 129, 144, 0.3);
+}
+
+.button:disabled {
+    background: var(--color-border);
+    border-color: var(--color-border);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.button:active:not(:disabled) {
+    transform: translateY(1px);
+}
+
+/* Success message */
+.successMessage {
+    padding: var(--space-4);
+    background: #d4edda;
+    border: 2px solid #28a745;
+    border-radius: var(--radius-md);
+    color: #155724;
+    font-family: var(--font-sans);
+    font-size: var(--font-size-md);
+    text-align: center;
+}
+
+/* Error message */
+.errorMessage {
+    padding: var(--space-4);
+    background: #f8d7da;
+    border: 2px solid #c44;
+    border-radius: var(--radius-md);
+    color: #721c24;
+    font-family: var(--font-sans);
+    font-size: var(--font-size-md);
+    text-align: center;
+}
+
+.errorMessage a {
+    color: #721c24;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.errorMessage a:hover {
+    color: #c44;
+}
+
+.debugPanel {
+    margin: 0;
+    padding: var(--space-3);
+    background: var(--color-panel-strong);
+    border: var(--border-thin);
+    border-radius: var(--radius-md);
+    color: var(--color-ink);
+    font-family: "Courier New", Courier, monospace;
+    font-size: var(--font-size-sm);
+    white-space: pre-wrap;
+    overflow-x: auto;
+}
+
+/* Desktop adjustments */
+@media screen and (min-width: 768px) {
+    .form {
+        gap: var(--space-6);
+    }
+
+    .input,
+    .textarea {
+        padding: var(--space-4);
+    }
+
+    .button {
+        padding: var(--space-4) var(--space-8);
+        font-size: var(--font-size-lg);
+        align-self: flex-start;
+    }
+}

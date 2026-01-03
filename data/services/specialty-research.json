@@ -28,7 +28,7 @@
           "height": 400
         },
         {
-          "src": "/static/images/specialty_research/goss_family_title.png",
+          "src": "/static/images/specialty_research/goss_family_title.jpg",
           "alt": "Goss Family title and photos",
           "width": 335,
           "height": 435
@@ -46,7 +46,7 @@
         "location": "Summerville, SC"
       },
       "image": {
-        "src": "/static/images/specialty_research/war_department_map.png",
+        "src": "/static/images/specialty_research/war_department_map.jpg",
         "alt": "War department map showing county line",
         "width": 400,
         "height": 400

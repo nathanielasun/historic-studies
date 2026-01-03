@@ -69,7 +69,7 @@
 .d_pagelist_m {
     cursor: pointer;
     position: absolute;
-    top: calc(100% + var(--space-2));
+    top: calc(100% - var(--space-2));
     right: var(--space-1);
     display: block;
     width: 140px;
@@ -89,7 +89,7 @@
 
 .pagelist_item_m,
 .service_item_m {
-    height: 40px;
+    height: 50px;
     width: 100%;
     text-align: center;
     border-bottom: var(--border-thin);
@@ -129,9 +129,9 @@
     display: none;
     position: absolute;
     list-style-type: none;
-    padding: var(--space-1) 0px;
+    padding: var(--space-1) 5px;
     right: 138px;
-    width: 180px;
+    width: 200px;
     height: auto;
     flex-direction: column;
     justify-content: center;
@@ -272,7 +272,7 @@
     .services_list {
         display: none;
         position: absolute;
-        top: calc(100% + var(--space-1));
+        top: calc(100%);
         left: 0px;
         padding: var(--space-1) 0px;
         margin: auto;
@@ -294,6 +294,7 @@
         height: 40px;
         text-align: center;
         border-bottom: var(--border-thin);
+        min-width: 128px;
     }
 
     .service_item_link {

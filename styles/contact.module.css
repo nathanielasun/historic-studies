@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: var(--section-gap-mobile);
+    gap: var(--space-4);
     padding: var(--panel-padding-mobile);
     background: var(--color-panel);
     border: var(--border-thin);
@@ -34,8 +34,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: var(--space-5);
+    gap: var(--space-3);
     align-items: stretch;
+    border-top: var(--border-thin);
+    padding-top: var(--space-4);
 }
 
 .d_connect {
@@ -44,12 +46,19 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-bottom: var(--space-2);
+    padding-bottom: var(--space-1);
 }
 
 .d_card {
     margin: 0;
     width: 100%;
+}
+
+.contactCard {
+    --card-text-size: var(--font-size-sm);
+    --card-text-line-height: 1.3;
+    --card-text-margin-bottom: var(--space-2);
+    --card-title-size: var(--font-size-lg);
 }
 
 .connect {
@@ -66,13 +75,51 @@
     width: 100%;
 }
 
+/* Form Section */
+.d_formSection {
+    width: 100%;
+    margin: 0;
+    padding: var(--space-4);
+    background: var(--color-surface);
+    border: var(--border-thin);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+}
+
+.d_content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.formIntro {
+    margin-bottom: var(--space-6);
+    text-align: center;
+}
+
+.formTitle {
+    margin: 0 0 var(--space-3) 0;
+    font-size: var(--font-size-xl);
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    letter-spacing: 0.02em;
+}
+
+.formDescription {
+    margin: 0;
+    font-size: var(--font-size-md);
+    font-family: var(--font-sans);
+    color: var(--color-ink-muted);
+    line-height: var(--line-height-base);
+}
+
 @media screen and (min-width: 768px) {
     .d_encompass {
         width: var(--layout-width-desktop);
         min-width: var(--layout-min-width);
         max-width: var(--layout-max-width);
         padding: var(--panel-padding-desktop);
-        gap: var(--section-gap-desktop);
+        gap: var(--space-5);
     }
 
     .d_header {
@@ -81,6 +128,10 @@
 
     .d_bodycards {
         width: 100%;
+        border-top: none;
+        padding-top: 0;
+        border-left: var(--border-thin);
+        padding-left: var(--space-5);
     }
 
     .d_card {
@@ -93,5 +144,29 @@
 
     .connect {
         font-size: var(--font-size-3xl);
+    }
+
+    .d_content {
+        display: grid;
+        grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+        gap: var(--space-6);
+        align-items: start;
+    }
+
+    .contactCard {
+        --card-text-size: var(--font-size-md);
+        --card-title-size: var(--font-size-xl);
+    }
+
+    .d_formSection {
+        padding: var(--space-6);
+    }
+
+    .formTitle {
+        font-size: var(--font-size-2xl);
+    }
+
+    .formDescription {
+        font-size: var(--font-size-lg);
     }
 }

@@ -33,7 +33,7 @@ export async function getStaticProps({ params }) {
     let showClient = true;
 
     if (params.service === 'oral-history') {
-        titleSuffix = 'Projects and Service Examples';
+        titleSuffix = ' and Service Examples';
     } else if (params.service === 'published-works') {
         titleSuffix = '';
         showClient = false; // Published works don't show client info

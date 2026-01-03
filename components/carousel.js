@@ -48,9 +48,9 @@ const Carousel = () => {
             <div className={styles.d_slide}>
                 <div className={styles.d_images}>
                 <Image className={styles.slide} src="/static/images/published_works/bor_water_control_structure.png" width={248} height={320} loading="lazy" />
-                <Image className={styles.slide} src="/static/images/published_works/as_mobile_goes.png" width={248} height={320} loading="lazy" />
-                <Image className={styles.slide} src="/static/images/published_works/william_bartrams_travels.png" width={248} height={320} loading="lazy" />
-                <Image className={styles.slide} src="/static/images/published_works/red_book_cover.png" width={248} height={320} loading="lazy"/>
+                <Image className={styles.slide} src="/static/images/published_works/as_mobile_goes.jpg" width={248} height={320} loading="lazy" />
+                <Image className={styles.slide} src="/static/images/published_works/william_bartrams_travels.jpg" width={248} height={320} loading="lazy" />
+                <Image className={styles.slide} src="/static/images/published_works/red_book_cover.jpg" width={248} height={320} loading="lazy"/>
                 </div>
                 <div className={styles.d_slide_text}>
                     <p className={styles.slide_text}>Published Works</p>

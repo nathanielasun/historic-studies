@@ -7,10 +7,10 @@
   },
   "hero": {
     "image": {
-      "src": "/static/images/byline.png",
+      "src": "/static/images/byline-optimized.jpg",
       "alt": "Historic Studies Limited - Professional Historical Research",
-      "width": 1440,
-      "height": 720
+      "width": 1920,
+      "height": 1111
     }
   },
   "sections": [

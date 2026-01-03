@@ -8,7 +8,7 @@ import styles from './ImageCard.module.css';
  * @param {string} props.variant - Layout variant: 'image-left', 'image-right', 'image-middle', 'double-bottom'
  * @param {string} props.title - Card title
  * @param {string|React.ReactNode} props.title - Card title (can be string or JSX for links)
- * @param {string} props.text - Card content (supports HTML via dangerouslySetInnerHTML)
+ * @param {string|React.ReactNode} props.text - Card content (string supports HTML via dangerouslySetInnerHTML)
  * @param {Object} props.image - Single image object (for left/right variants)
  * @param {string} props.image.src - Image source path
  * @param {string} props.image.alt - Image alt text
@@ -29,6 +29,24 @@ export default function ImageCard({
 }) {
     // Determine which images to use
     const imageList = images || (image ? [image] : []);
+    const hasImages = imageList.length > 0;
+
+    const renderText = () => {
+        if (!text) {
+            return null;
+        }
+
+        if (typeof text === 'string') {
+            return (
+                <div
+                    className={styles.text}
+                    dangerouslySetInnerHTML={{ __html: text }}
+                />
+            );
+        }
+
+        return <div className={styles.text}>{text}</div>;
+    };
 
     // Render background blur effect for first image
     const renderBackgroundBlur = (img) => (
@@ -62,15 +80,14 @@ export default function ImageCard({
     if (variant === 'image-left' || variant === 'image-right') {
         return (
             <div className={`${styles.card} ${styles[variant]} ${className}`} style={style}>
-                <div className={styles.imageContainer}>
-                    {imageList[0] && renderImage(imageList[0])}
-                </div>
+                {hasImages && (
+                    <div className={styles.imageContainer}>
+                        {imageList[0] && renderImage(imageList[0])}
+                    </div>
+                )}
                 <div className={styles.content}>
                     <h2 className={styles.title}>{title}</h2>
-                    <div
-                        className={styles.text}
-                        dangerouslySetInnerHTML={{ __html: text }}
-                    />
+                    {renderText()}
                 </div>
             </div>
         );
@@ -85,10 +102,7 @@ export default function ImageCard({
                 </div>
                 <div className={styles.content}>
                     <h2 className={styles.title}>{title}</h2>
-                    <div
-                        className={styles.text}
-                        dangerouslySetInnerHTML={{ __html: text }}
-                    />
+                    {renderText()}
                 </div>
                 <div className={styles.imageContainer}>
                     {imageList[1] && renderImage(imageList[1], 1)}
@@ -103,10 +117,7 @@ export default function ImageCard({
             <div className={`${styles.card} ${styles.doubleBottom} ${className}`} style={style}>
                 <div className={styles.content}>
                     <h2 className={styles.title}>{title}</h2>
-                    <div
-                        className={styles.text}
-                        dangerouslySetInnerHTML={{ __html: text }}
-                    />
+                    {renderText()}
                 </div>
                 <div className={styles.imageGrid}>
                     {imageList.map((img, index) => (

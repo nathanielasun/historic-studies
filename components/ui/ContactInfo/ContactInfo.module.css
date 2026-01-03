@@ -1,0 +1,31 @@
+.info {
+    display: grid;
+    gap: var(--space-2);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: minmax(80px, auto) 1fr;
+    gap: var(--space-3);
+    align-items: baseline;
+}
+
+.label {
+    font-size: var(--font-size-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: var(--font-sans);
+    color: var(--color-ink-muted);
+}
+
+.value {
+    color: var(--color-ink);
+    font-size: inherit;
+    word-break: break-word;
+}
+
+@media screen and (min-width: 768px) {
+    .label {
+        font-size: var(--font-size-sm);
+    }
+}

@@ -30,7 +30,7 @@ const Projects = () => {
                         <ImageCard
                             variant="image-right"
                             image={{
-                                src: "/static/images/specialty_research/aerial_edisto_map.png",
+                                src: "/static/images/specialty_research/aerial_edisto_map.jpg",
                                 alt: "Little Edisto Aerial Map",
                                 width: 333,
                                 height: 480
@@ -58,7 +58,7 @@ const Projects = () => {
                             width={800 / 2}
                             height={627 / 2}
                             alt="Dean Hall plantation overview"
-                            src="/static/images/cultural_resources/dean_hall_plantation.png"
+                            src="/static/images/cultural_resources/dean_hall_plantation.jpg"
                         />
                         <Image
                             className={styles.project_image}

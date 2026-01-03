@@ -22,7 +22,7 @@
         "location": "Mobile, Alabama"
       },
       "image": {
-        "src": "/static/images/published_works/as_mobile_goes.png",
+        "src": "/static/images/published_works/as_mobile_goes.jpg",
         "alt": "Photo of As Mobile Goes cover",
         "width": 334,
         "height": 432
@@ -39,7 +39,7 @@
         "location": "South Carolina"
       },
       "image": {
-        "src": "/static/images/published_works/hays_ingleside_plantation.png",
+        "src": "/static/images/published_works/hays_ingleside_plantation.jpg",
         "alt": "Photo of Hays Ingleside plantation",
         "width": 400,
         "height": 550
